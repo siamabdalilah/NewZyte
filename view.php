@@ -37,7 +37,7 @@
 				// ADD PLACE FOR COMMENTING;
 			}
 			else{
-				echo "<h3> Invalid. Story not found</h3>;
+				echo "<h3> Invalid. Story not found</h3>";
 			}
 		?>
 		</div>
