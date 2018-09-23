@@ -21,12 +21,14 @@
 			<?php
 				if (isset($_SESSION['user'])){
 					echo $_SESSION['user'];
+
 					// ADD LOGOUT FUNCTIONALITY
+					echo "<a herf = \"logout.php\"> Log Out</a>";
 				}
 				else{
 					// HIDE PASSWORD
-					echo "<form method = 'POST'><input type = 'text' name = 'user_name'/><br>
-					<input type = 'text' name = 'password'/><input type = 'submit'/>";
+					echo "<form method = 'POST'><label>Username:</label><input type = 'text' name = 'user_name'/><br>
+					<label>Password</label><input type = 'text' name = 'password'/><input type = 'submit'/>";
 				}
 			?>
 			<!-- Username and logout if user -->
