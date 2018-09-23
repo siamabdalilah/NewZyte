@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	require database.php;
+	require 'database.php';
 	//if (isset$_SESSION['user'])
 	$id = isset($_GET['id'])? $_GET['id'] : null;
 	$usr = isset($_SESSION['user'])? $_SESSION['user'] : null;
