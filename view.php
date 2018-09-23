@@ -4,7 +4,7 @@
 	//if (isset$_SESSION['user'])
 	$id = isset($_GET['id'])? $_GET['id'] : null;
 	$usr = isset($_SESSION['user'])? $_SESSION['user'] : null;
-	$stmt = $sqli->prepare('select title, stories, owner from tables where id = ?')
+	$stmt = $sqli->prepare('select title, stories, owner from tables where id = ?');
 	$stmt->bind_params('s', $id);
 	$stmt->execute();
 	$stmt->bind_result($title, $story, $owner);
