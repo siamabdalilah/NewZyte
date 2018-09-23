@@ -20,7 +20,7 @@
 
 			<?php
 				if (isset($_SESSION['user'])){
-					echo $_SESSION['user'];
+					echo htmlspecialchars($_SESSION['user']);
 
 					// ADD LOGOUT FUNCTIONALITY
 					echo "<a herf = \"logout.php\"> Log Out</a>";
@@ -28,7 +28,8 @@
 				else{
 					// HIDE PASSWORD
 					echo "<form method = 'POST'><label>Username:</label><input type = 'text' name = 'user_name'/><br>
-					<label>Password</label><input type = 'Password' name = 'password'/><input type = 'submit'/>";
+					<label>Password</label><input type = 'Password' name = 'password'/><input type = 'submit'/></form>";
+					echo "<a> Register new User</a>";
 				}
 			?>
 			<!-- Username and logout if user -->
