@@ -4,8 +4,12 @@
 	//if (isset$_SESSION['user'])
 	$id = isset($_GET['id'])? $_GET['id'] : null;
 	$usr = isset($_SESSION['user'])? $_SESSION['user'] : null;
-	$stmt = $sqli->prepare("select title, stories, owner from tables where id = ?");
+	$stmt = $sqli->prepare("select title, stories, owner from stories where id = ?");
 	$stmt->bind_param('s', $id);
+	if(!$stmt){
+		printf("Query Prep Failed: %s\n", $sqli->error);
+		exit;
+	}	
 	$stmt->execute();
 	$stmt->bind_result($title, $story, $owner);
 
