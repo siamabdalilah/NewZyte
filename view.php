@@ -4,7 +4,7 @@
 	//if (isset$_SESSION['user'])
 	$id = isset($_GET['id'])? $_GET['id'] : null;
 	$usr = isset($_SESSION['user'])? $_SESSION['user'] : null;
-	$stmt = sqli->prepare('select title, stories, owner from tables where id = ?')
+	$stmt = $sqli->prepare('select title, stories, owner from tables where id = ?')
 	$stmt->bind_params('s', $id);
 	$stmt->execute();
 	$stmt->bind_result($title, $story, $owner);
@@ -23,7 +23,7 @@
 		<?php
 			if ($stmt->fetch()){
 				echo "<h3> $title </h3> <br>Written by $owner<br><p>$story</p>";
-				$comments = sqli->preapre("select owner, comment from comments where story = ?");
+				$comments = $sqli->preapre("select owner, comment from comments where story = ?");
 				$comments->bind_params('s', $id);
 				$comments->execute();
 				$comments->bind_result($user, $comment);
