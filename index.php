@@ -7,7 +7,7 @@
 		$validation = $sqli->prepare('select * from table users where user_name = ? and password_hash = ?');
 		$validation->bind_param('ss', $_POST['user_name'], $pass);
 		$flag = false;
-		if (validation->fetch()){
+		if ($validation->fetch()){
 			$_SESSION['user'] = $_POST['user_name']);
 		}
 
