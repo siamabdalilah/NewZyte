@@ -40,8 +40,8 @@
 					if ($flag){
 						echo "Invalid. Please try again<br>";
 					}
-					echo "<form action = '"; echo htmlentities($_SERVER['PHP_SELF']); 
-					ehco "' method = 'POST'><label>Username:</label><input type = 'text' name = 'user_name'/><br>
+					echo "<form action = \'"; echo htmlentities($_SERVER['PHP_SELF']); 
+					ehco "\' method = 'POST'><label>Username:</label><input type = 'text' name = 'user_name'/><br>
 					<label>Password</label><input type = 'Password' name = 'password'/><input type = 'submit'/></form>";
 					echo "<a> Register new User</a>";
 				}
