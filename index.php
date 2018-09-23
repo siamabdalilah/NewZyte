@@ -1,11 +1,6 @@
 <?php
 	session_start();
-	$sqli = new mysqli('localhost', 'wustlinst', 'wustl_pass', 'newssite');
-
-	if ($sqli->connect_errno){
-		printf("Connection Failed: $s\n", $sqli->connect_errno);
-		exit;
-	}
+	require database.php;
 	//if (isset$_SESSION['user'])
 ?>
 
