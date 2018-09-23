@@ -28,7 +28,7 @@
 				else{
 					// HIDE PASSWORD
 					echo "<form method = 'POST'><label>Username:</label><input type = 'text' name = 'user_name'/><br>
-					<label>Password</label><input type = 'text' name = 'password'/><input type = 'submit'/>";
+					<label>Password</label><input type = 'Password' name = 'password'/><input type = 'submit'/>";
 				}
 			?>
 			<!-- Username and logout if user -->
