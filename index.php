@@ -4,7 +4,7 @@
 
 	if (isset($_POST['user_name']) && isset($_POST['password'])){
 		$pass = password_hash($_POST['password'], PASSWORD_BCRYPT);
-		$validation = sqli->prepare('select * from table users where user_name = ? and password_hash = ?');
+		$validation = $sqli->prepare('select * from table users where user_name = ? and password_hash = ?');
 		$validation->bind_param('ss', $_POST['user_name'], $pass);
 		$flag = false;
 		if (validation->fetch()){
