@@ -14,7 +14,7 @@
 		}
 		else{
 			$pass = password_hash($_POST['pass'], PASSWORD_BCRYPT);
-			$usrins = sqli->prepare("insert into users (user_name, password_hash) values (?, ?)");
+			$usrins = $sqli->prepare("insert into users (user_name, password_hash) values (?, ?)");
 			$usrins->bind_param('ss', $_POST['user'], pass);
 			$usrins->execute();
 			session_start();
