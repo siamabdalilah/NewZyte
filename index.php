@@ -44,7 +44,7 @@
 					echo "<form action = '"; echo htmlentities($_SERVER['PHP_SELF']); 
 					echo "' method = 'POST'><label>Username:</label><input type = 'text' name = 'user_name'/><br>
 					<label>Password</label><input type = 'Password' name = 'password'/><input type = 'submit'/></form>";
-					echo "<a> Register new User</a>";
+					echo "<a href = 'register.php'> Register new User</a>";
 				}
 			?>
 		</div>
