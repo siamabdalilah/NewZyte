@@ -7,6 +7,7 @@
 		exit;
 	}
 
+	$id = $_GET['id'];
 	$stmt = $sqli->prepare('select count(*) from stories where id = ? and owner = ?');
 	$stmt->bind_param('ds', $id, $_SESSION['user']);
 	$stmt->execute();
