@@ -13,9 +13,9 @@
 		$stmt = $sqli->prepare("select count(*) from users where user_name = ?");
 		$stmt -> bind_param('s', $_POST['user']);
 		$stmt->execute();
-		$res = $stmt->get_result();
+		$stmt->bind_result($count)
 
-		if ($res != 0){
+		if ($count != 0){
 			echo "Username already exists<br>";
 		}
 		else if ($_POST['pass'] !== $_POST['confpass']){
