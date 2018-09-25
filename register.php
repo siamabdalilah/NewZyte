@@ -7,9 +7,7 @@
 
 <?php
 	require 'database.php';
-	echo "pass2";
 	if (isset($_POST['user'])  && isset($_POST['pass']) && isset($_POST['confpass'])){
-		echo "pass";
 		$stmt = $sqli->prepare("select count(*) from users where user_name = ?");
 		$stmt -> bind_param('s', $_POST['user']);
 		$stmt->execute();
@@ -24,7 +22,7 @@
 		else{
 			$pass = password_hash($_POST['pass'], PASSWORD_BCRYPT);
 			$usrins = $sqli->prepare("insert into users (user_name, password_hash) values (?, ?)");
-			$usrins->bind_param('ss', $_POST['user'], pass);
+			$usrins->bind_param('ss', $_POST['user'], $pass);
 			$usrins->execute();
 			session_start();
 			$_SESSION['user'] = $_POST['user'];
