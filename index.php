@@ -78,11 +78,15 @@
 				$stmt->bind_result($title, $link, $user, $time);
 
 				while($stmt->fetch()){
-					echo "<div class = 'content'>";
-					echo "<a href = '"; echo htmlspecialchars($link); echo "'>";
+					echo "<a class = 'contentwrap' href = '"; echo htmlspecialchars($link);
+					echo "'>";
+					echo "<div class = 'content'><h6>";
 					echo htmlspecialchars($title);
-					echo "</a>";
-					echo "</div>";
+					echo "</h6><br>Written by ";
+					echo htmlspecialchars($user);
+					echo "&nbsp &nbps Posted: ";
+					echo htmlspecialchars($time);
+					echo "</div></a>";
 				}
 			?>
 		</div>
