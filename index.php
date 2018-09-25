@@ -82,7 +82,7 @@
 					echo "<a href = '"; echo htmlspecialchars($link); echo "'>";
 					echo htmlspecialchars($title);
 					echo "</a>";
-					echo "</div>"
+					echo "</div>";
 				}
 			?>
 		</div>
