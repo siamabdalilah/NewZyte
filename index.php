@@ -35,7 +35,9 @@
 				if (isset($_SESSION['user'])){
 					echo htmlspecialchars($_SESSION['user']);
 
-					echo "<a herf = \"logout.php\"> Log Out</a>";
+					echo "<br> <a herf = \"logout.php\"> Log Out</a><br>";
+					echo "<a href = 'insertstory.php'>Add Story</a><br><br><br>"
+
 				}
 				else{
 					if ($flag){
@@ -52,7 +54,7 @@
 		<div>
 			<!-- List all stories -->
 			<?php
-				$stmt = $sqli->prepare("select title from stories");
+				$stmt = $sqli->prepare("select title, link from stories");
 				if (!$stmt){
 					printf("Query Prep Failed: %s\n", $sqli->error);
 					exit;
@@ -60,10 +62,10 @@
 
 				$stmt->execute();
 
-				$stmt->bind_result($title);
+				$stmt->bind_result($title, $link);
 
 				while($stmt->fetch()){
-					echo "htmlspecialchars($title)<br>";
+					echo "<a href = 'htmlspacialchars($link)'>htmlspecialchars($title)</a><br><br>";
 				}
 			?>
 		</div>
