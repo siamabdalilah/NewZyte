@@ -10,9 +10,11 @@
 	$stmt->bind_param('d', $id);
 	$stmt->execute();
 	$stmt->bind_result($usr);
+	$flag = false;
 	if (!$stmt->fetch()){
-		header("Location: index.php");
-		exit;
+		$flag = true;
+		// header("Location: index.php");
+		// exit;
 	}
 	$stmt->close();
 	$id = $_GET['id'];
@@ -26,6 +28,13 @@
 	<title>Add Story</title>
 </head>
 <body>
+	<?php
+		if ($flag){
+			echo "fml";
+			exit;
+		}
+	?>
+
 	<div class = 'top'>
 			<div class = 'title'>
 				NewZyte
