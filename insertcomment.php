@@ -15,7 +15,7 @@
 		exit;
 	}
 	$stmt->close();
-	id = $_GET['id'];
+	$id = $_GET['id'];
 
 ?>
 
