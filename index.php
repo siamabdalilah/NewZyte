@@ -5,10 +5,10 @@
 
 	if (isset($_POST['user_name']) && isset($_POST['password'])){
 		$pass = password_hash($_POST['password'], PASSWORD_BCRYPT);
-		$validation = $sqli->prepare('select * from users where user_name = ? and password_hash = ?');
-		$validation->bind_param('ss', $_POST['user_name'], $pass);
+		$hash = $sqli->prepare('select password_hash from users where user_name = ?');
+		$hash->bind_param('s', $_POST['user_name']);
 		
-		if ($validation->fetch()){
+		if (password_verify($pass, $hash)){
 			$_SESSION['user'] = $_POST['user_name'];
 		}
 
