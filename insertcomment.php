@@ -36,7 +36,6 @@
 
 			<div class = 'rightside'>
 				<?php
-					echo "$usr ";
 					echo "Welcome, ";
 					echo htmlspecialchars($_SESSION['user']);
 

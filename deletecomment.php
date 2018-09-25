@@ -6,7 +6,8 @@
 		header("Location: index.php");
 		exit;
 	}
-
+	$id = $_GET['id'];
+	
 	$stmt = $sqli->prepare('select story from comments where id = ? and owner = ?');
 	$stmt->bind_param('ds', $id, $_SESSION['user']);
 	$stmt->execute();
@@ -16,7 +17,7 @@
 		exit;
 	}
 	$stmt->close();
-	$id = $_GET['id'];
+	
 
 	$del = $sqli->prepare('delete from comments where id = ?');
 	$del->bind_param('d', $id);
