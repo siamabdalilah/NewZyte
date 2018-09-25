@@ -5,11 +5,18 @@
 
 	if (isset($_POST['user_name']) && isset($_POST['password'])){
 		$pass = password_hash($_POST['password'], PASSWORD_BCRYPT);
-		$hash = $sqli->prepare('select password_hash from users where user_name = ?');
-		$hash->bind_param('s', $_POST['user_name']);
+		$hashret = $sqli->prepare('select password_hash from users where user_name = ?');
+		$hashret->bind_param('s', $_POST['user_name']);
+
+		$hashret->execute();
+		$hashret->bind_result($hash);
+		$hashret->fetch();
 		
 		if (password_verify($pass, $hash)){
 			$_SESSION['user'] = $_POST['user_name'];
+			while(hashret->fetch()){
+				// do nothing
+			}
 		}
 
 		else{
