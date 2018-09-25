@@ -4,18 +4,19 @@ html{
 
 .top{
 	background-color: rgb(211, 245, 255);
-	position:relative;
+	/*position:relative;*/
+	height: 100px;
 }
 
 .title{
-	position: relative;
+	/*position: relative;*/
 	float: left;
 	font-style: italic;
 	font-size: 50px;
 }
 
 .rightside{
-	position: relative;
+	/*position: relative;*/
 	float: right;
 	font-size: 30px;
 }
@@ -28,5 +29,5 @@ html{
 
 
 .middle{
-	position: relative;
+	/*position: relative;*/
 }
