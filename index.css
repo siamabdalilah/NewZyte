@@ -6,7 +6,6 @@ html{
 	background-color: rgb(211, 245, 255);
 	/*position:relative;*/
 	height: 100px;
-	margin:30px;
 }
 
 .title{
@@ -14,10 +13,12 @@ html{
 	float: left;
 	font-style: italic;
 	font-size: 50px;
+	top: 20px;
 }
 
 .rightside{
 	/*position: relative;*/
+	top:20px;
 	float: right;
 	font-size: 30px;
 }
