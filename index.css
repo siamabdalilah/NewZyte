@@ -74,7 +74,7 @@ a{
 	transition: all .5s ease;
 	border-color: gray; 
 	border-style: solid;
-	border-bottom: 1px;
+	border-bottom: 0.5px;
 	border-right: 0px;
 	border-left: 0px;
 }
