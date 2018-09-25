@@ -48,7 +48,7 @@
 						echo htmlspecialchars($_SESSION['user']);
 
 						echo "&nbsp <a href = 'logout.php' class = 'button'> Log Out</a>&nbsp";
-						echo "<a href = 'insertstory.php' class = 'button'>Add Story</a><br>";
+						echo "<a href = 'insertstory.php' class = 'button'>Add Story</a>";
 
 					}
 					else{
@@ -64,7 +64,7 @@
 			</div>
 		</div>
 
-		<div>
+		<div class = 'middle'>
 			<!-- List all stories -->
 			<?php
 				$stmt = $sqli->prepare("select title, link from stories");

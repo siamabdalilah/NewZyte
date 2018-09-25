@@ -3,7 +3,8 @@ html{
 }
 
 .top{
-	background-color: rgb(211, 245, 255);
+	color: rgb(211, 245, 255);
+	position:relative;
 }
 
 .title{
@@ -21,4 +22,9 @@ html{
 	background-color: rgb(90, 127, 255);
 	height: 30px;
 	width: 80px;
+}
+
+
+.middle{
+	position: relative;
 }
