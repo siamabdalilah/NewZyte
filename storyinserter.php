@@ -13,7 +13,7 @@
 	$user = $_SESSION['user'];
 
 	$stmt = $sqli->prepare('insert into stories (owner, stories, title) values ( ?, ?, ?)');
-	$stmt->bind_param('sss', $user, $story, title);
+	$stmt->bind_param('sss', $user, $story, $title);
 	$stmt->execute();
 
 	$quer = $sqli->prepare('select id from strories where title = ?');
