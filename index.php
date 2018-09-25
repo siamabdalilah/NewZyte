@@ -32,7 +32,7 @@
 <html lang = 'en'>
 	<head>
 		<title>NewZyte</title>
-
+		<link href = 'index.css' rel = 'stylesheet' type = 'text/css'/>
 	</head>
 
 	<body>
