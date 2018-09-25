@@ -86,16 +86,6 @@ a{
 	transition: all .5s ease;
 	text-decoration: none;
 }
-.content:visited{
-	color: rgb(156, 136, 176);
-}
-h6.visited{
-	text-decoration:none;
-	color: rgb(156, 136, 176);
-}
-h6{
-	color: rgb(156, 136, 176);
-}
 
 .content:hover{
 	transform: scale(1.05);
@@ -105,12 +95,4 @@ h6{
 
 .content:active{
 	background-color: #ece6f5;
-}
-a.contentwrap{
-	
-	color: rgb(156, 136, 176);
-}
-
-a.contentwrap:visited{
-	color: rgb(156, 136, 176);
 }
