@@ -78,10 +78,11 @@
 				$stmt->bind_result($title, $link, $user, $time);
 
 				while($stmt->fetch()){
-					echo "<a class = 'contentwrapper' href = '"; echo htmlspecialchars($link); echo "'>";
-					echo "<div class = 'content'><h6>";
+					echo "<div class = 'container'>";
+					echo "<a href = '"; echo htmlspecialchars($link); echo "'>";
 					echo htmlspecialchars($title);
-					echo "</h></div></a>";
+					echo "</a>";
+					echo "</div>";
 				}
 			?>
 		</div>
