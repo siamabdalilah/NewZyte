@@ -18,7 +18,8 @@
 
 	
 	$stmt->close();
+	$link = 'view.php?id='.$id;
 
-	header("Location: index.php");
+	header("Location: $link");
 	exit;
 ?>
