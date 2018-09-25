@@ -6,14 +6,14 @@
 
 	$id = isset($_GET['id'])? $_GET['id'] : null;
 	$usr = isset($_SESSION['user'])? $_SESSION['user'] : null;
-	$stmt = $sqli->prepare("select title, stories, owner, time from stories where id = ?");
+	$stmt = $sqli->prepare("select title, stories, owner, time, id from stories where id = ?");
 	$stmt->bind_param('s', $id);
 	if(!$stmt){
 		printf("Query Prep Failed: %s\n", $sqli->error);
 		exit;
 	}	
 	$stmt->execute();
-	$stmt->bind_result($title, $story, $owner, $time);
+	$stmt->bind_result($title, $story, $owner, $time, $storyid);
 
 
 ?>
@@ -38,8 +38,7 @@
 						echo htmlspecialchars($_SESSION['user']);
 
 						echo "&nbsp <a href = 'logout.php' class = 'button'> Log Out</a>&nbsp";
-						echo "<a href = 'insertstory.php' class = 'button'>Add Story</a>&nbsp
-							<a href = 'index.php' class = 'button'>Home</a>";
+						echo "<a href = 'insertstory.php' class = 'button'>Add Story</a>&nbsp<a href = 'index.php' class = 'button'>Home</a>";
 
 					}
 					else{
@@ -60,10 +59,10 @@
 				// .largetext and .smalltext needs css
 				echo "<span class = 'largetext'> $title </span> <br><span class = 'smalltext'>Written by $owner. Posted: $time </span>";
 				if ($owner === $_SESSION['user']){
-					echo "<br><a href = 'updatestory.php'>Edit</a>&nbsp<a href = 'deletestory.php'>Delete</a>";
+					echo "<br><a href = 'updatestory.php?id=$storyid'>Edit</a>&nbsp<a href = 'deletestory.php?id=$storyid'>Delete</a>";
 				}
 				
-				echo "<br><br><br><p>$story</p>";
+				echo "<br><br><p>$story</p>";
 				$stmt->close();
 				$comments = $sqli->prepare("select owner, comment, id, time from comments where story = ?");
 				$comments->bind_param('s', $id);

@@ -8,11 +8,12 @@
 	}
 	$id = $_GET['id'];
 	
-	$stmt = $sqli->prepare('select story from comments where id = ? and owner = ?');
+	$stmt = $sqli->prepare('select count(*) from comments where id = ? and owner = ?');
 	$stmt->bind_param('ds', $id, $_SESSION['user']);
 	$stmt->execute();
 	$stmt->bind_result($usr);
-	if (!$stmt->fetch()){
+	$stmt->fetch();
+	if (!($usr === 1)){
 		header("Location: index.php");
 		exit;
 	}
