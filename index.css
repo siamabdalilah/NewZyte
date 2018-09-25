@@ -3,17 +3,19 @@ html{
 }
 
 .top{
-	color: rgb(211, 245, 255);
+	background-color: rgb(211, 245, 255);
 	position:relative;
 }
 
 .title{
+	position: relative;
 	float: left;
 	font-style: italic;
 	font-size: 50px;
 }
 
 .rightside{
+	position: relative;
 	float: right;
 	font-size: 30px;
 }
