@@ -38,19 +38,31 @@ html{
 	text-align: center;
 	display: inline-block;
 	margin-top: 2px;
+	margin-right: 3px;
 	transition: all 0.5s ease;
 }
 
+.button:hover{
+	color: rgb(90, 127, 255);
+	background-color: white;
+	border-style: solid;
+	border-color: white;
+}
+.submitbutton:hover{
+	color: rgb(90, 127, 255);
+	background-color: white;
+	border-style: solid;
+	border-color: white;
+}
 .submitbutton{
 	cursor: pointer;
 	margin: 2px 2px;
 	background-color: rgb(90, 127, 255);
 	border: none;
-	/*padding-top: 8px;*/
-	padding-right: 3px;
+
 	height: 35px;
 	font-size: 20px;
-
+	transition: all 0.5s ease;
 
 }
 
@@ -72,11 +84,6 @@ a{
 	height: 80px;
 	width: 500px;
 	transition: all .5s ease;
-	border-color: gray; 
-	border-style: solid;
-	border-bottom: 0.5px;
-	border-right: 0px;
-	border-left: 0px;
 }
 
 .content:hover{
