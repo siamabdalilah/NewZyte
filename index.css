@@ -28,7 +28,7 @@ html{
 	margin-right: 10px;
  	border:none;
  	height: 40px;
- 	width: 150px;
+ 	/*width: 150px;*/
 	cursor: pointer;
 	font-size: 25px;
 	color: white;
@@ -48,11 +48,11 @@ a{
 	text-decoration: none;
 }
 
-a.content{
+.content > a{
 	
 	color: rgb(156, 136, 176);
 }
 
-a.content:visited{
+.content > a:visited{
 	color: rgb(156, 136, 176);
 }
