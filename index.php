@@ -78,7 +78,7 @@
 				$stmt->bind_result($title, $link, $user, $time);
 
 				while($stmt->fetch()){
-					echo "<div class = 'container'>";
+					echo "<div class = 'content'>";
 					echo "<a href = '"; echo htmlspecialchars($link); echo "'>";
 					echo htmlspecialchars($title);
 					echo "</a>";
