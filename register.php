@@ -12,12 +12,14 @@
 		$stmt -> bind_param('s', $_POST['user']);
 		$stmt->execute();
 		$stmt->bind_result($count);
-		$stmt->fetch();
-		echo $count;
-
+		while ($stmt->fetch()){
+			echo $count;
+		}
+		
 		if ($count != 0){
 			echo "Username already exists<br>";
 		}
+
 		else if (!($_POST['pass'] === $_POST['confpass'])){
 			echo "Passwords do no match<br>";
 		}
