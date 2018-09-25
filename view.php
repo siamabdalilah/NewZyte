@@ -71,7 +71,7 @@
 					// .comment needs css
 					echo "<div class = 'comment'>";
 					echo "$user writes:<br>$comment";
-					echo "<span class = 'smalltext> Posted: $time.";
+					echo "<br><span class = 'smalltext'> Posted: $time. </span>";
 					if ($user === $_SESSION['user']) {
 						echo "&nbsp <a href = 'updatecomment.php'>Edit</a><a href = 'deletecomment.php'>Delete</a>";
 					}
