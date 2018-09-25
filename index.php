@@ -67,7 +67,7 @@
 		<div class = 'middle'>
 			<!-- List all stories -->
 			<?php
-				$stmt = $sqli->prepare("select title, link from stories");
+				$stmt = $sqli->prepare("select title, link, owner, time from stories");
 				if (!$stmt){
 					printf("Query Prep Failed: %s\n", $sqli->error);
 					exit;
@@ -75,12 +75,14 @@
 
 				$stmt->execute();
 
-				$stmt->bind_result($title, $link);
+				$stmt->bind_result($title, $link, $user, $time);
 
 				while($stmt->fetch()){
+					echo "<div class = 'container'>";
 					echo "<a href = '"; echo htmlspecialchars($link); echo "'>";
 					echo htmlspecialchars($title);
-					echo "</a><br><br>";
+					echo "</a>";
+					echo "</div>"
 				}
 			?>
 		</div>
