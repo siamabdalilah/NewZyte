@@ -44,7 +44,7 @@ html{
 
 .button:hover{
 	color: rgb(90, 127, 255);
-	background-color: rgb(250,250,250);
+	background-color: white;
 	border-style: solid;
 	border-color: white;
 }
@@ -85,6 +85,8 @@ a{
 	width: 500px;
 	transition: all .5s ease;
 	text-decoration: none;
+	padding-top: 2px;
+	padding-left: 2px;
 }
 
 .content:hover{
