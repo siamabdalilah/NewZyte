@@ -45,11 +45,11 @@ html{
 	padding-top: 40px;
 }
 
-a{
+a.content{
 	text-decoration: none;
 	color: rgb(156, 136, 176);
 }
 
-a:visited{
+a.content:visited{
 	color: rgb(156, 136, 176);
 }
