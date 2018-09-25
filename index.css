@@ -32,7 +32,7 @@ html{
 	cursor: pointer;
 	font-size: 25px;
 	font-color: white;
-	padding-top: 13px;
+	padding-top: 8px;
 	text-align: center;
 	display: inline-block;
 
@@ -45,6 +45,6 @@ html{
 	padding-top: 40px;
 }
 
-a:visted{
+a:visited{
 	none;
 }
