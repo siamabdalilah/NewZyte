@@ -6,6 +6,7 @@ html{
 	background-color: rgb(211, 245, 255);
 	position:relative;
 	height: 180px;
+	margin: none;
 }
 
 .title{
