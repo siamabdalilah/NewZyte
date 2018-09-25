@@ -13,12 +13,12 @@ html{
 	float: left;
 	font-style: italic;
 	font-size: 50px;
-	top: 20px;
+	top:40px;
 }
 
 .rightside{
 	/*position: relative;*/
-	top:20px;
+	top:40px; 
 	float: right;
 	font-size: 30px;
 }
