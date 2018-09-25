@@ -45,7 +45,7 @@
 
 		<div class = 'middle'>
 			<?php
-				$stmt = $sqli->prepare("select title, link, owner, time from stories");
+				$stmt = $sqli->prepare("select title, link, owner, time from stories order by time desc");
 				if (!$stmt){
 					printf("Query Prep Failed: %s\n", $sqli->error);
 					exit;
