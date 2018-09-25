@@ -4,7 +4,7 @@
 	$flag = false;
 
 	if (isset($_POST['user_name']) && isset($_POST['password'])){
-		$pass = password_hash($_POST['password'], PASSWORD_BCRYPT);
+		$pass = $_POST['password'];
 		$hashret = $sqli->prepare('select password_hash from users where user_name = ?');
 		$hashret->bind_param('s', $_POST['user_name']);
 
