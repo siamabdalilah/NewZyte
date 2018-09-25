@@ -12,6 +12,7 @@
 		$stmt -> bind_param('s', $_POST['user']);
 		$stmt->execute();
 		$stmt->bind_result($count);
+		$stmt->fetch();
 
 		if ($count != 0){
 			echo "Username already exists<br>";
