@@ -72,12 +72,14 @@ a{
 	height: 80px;
 	width: 500px;
 	transition: all .5s ease;
+	border-top: 1px;
+	border-bottom: 1px;
 }
 
 .content:hover{
 	transform: scale(1.05);
 	box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
-	translate: transform(50%, 0%);
+	transform: translate(10%, 0%);
 }
 
 .content:active{
