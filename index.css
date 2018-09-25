@@ -85,8 +85,8 @@ a{
 	width: 500px;
 	transition: all .5s ease;
 	text-decoration: none;
-	padding-top: 2px;
-	padding-left: 2px;
+	padding-top: 5px;
+	padding-left: 5px;
 }
 
 .content:hover{
