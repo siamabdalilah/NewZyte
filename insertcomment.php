@@ -13,7 +13,7 @@
 	$stmt->bind_result($usr);
 	$flag = false;
 	$stmt->fetch();
-	if (!($usr === 1)_{
+	if (!($usr === 1)){
 		header("Location: index.php");
 		exit;
 	}
