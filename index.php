@@ -35,7 +35,7 @@
 				if (isset($_SESSION['user'])){
 					echo htmlspecialchars($_SESSION['user']);
 
-					echo "<br> <a herf = \"logout.php\"> Log Out</a><br>";
+					echo "<br> <a href = \"logout.php\"> Log Out</a><br>";
 					echo "<a href = 'insertstory.php'>Add Story</a><br><br><br>";
 
 				}

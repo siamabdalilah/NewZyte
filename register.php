@@ -7,18 +7,21 @@
 
 <?php
 	require 'database.php';
+	if (isset($_SESSION['user'])){
+		header("Location: index.php");
+		exit;
+	}
 	if (isset($_POST['user'])  && isset($_POST['pass']) && isset($_POST['confpass'])){
 		$stmt = $sqli->prepare("select count(*) from users where user_name = ?");
 		$stmt -> bind_param('s', $_POST['user']);
 		$stmt->execute();
 		$stmt->bind_result($count);
-		while ($stmt->fetch()){
-			echo $count;
-		}
+		$stmt->fetch()
 		
 		if ($count != 0){
 			echo "Username already exists<br>";
 		}
+		$stmt->fetch();
 
 		else if (!($_POST['pass'] === $_POST['confpass'])){
 			echo "Passwords do no match<br>";
@@ -35,7 +38,7 @@
 			$usrins->execute();
 			session_start();
 			$_SESSION['user'] = $_POST['user'];
-			//header("Location: index.php");
+			header("Location: index.php");
 			exit;
 		}
 	}
