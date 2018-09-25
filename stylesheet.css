@@ -123,3 +123,8 @@ a{
 	height: 80px;
 	width: 500px;
 }
+
+.textar{
+	font-size: 10px;
+	font-family: monaco;
+}
