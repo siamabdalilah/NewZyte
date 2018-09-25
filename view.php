@@ -50,26 +50,39 @@
 				?>
 		</div>
 		<div class = 'middle'>
+			<span style = "font-size: 15px;"> Comments:</span><br>
 		<?php
 			if ($stmt->fetch()){
 				// .largetext and .smalltext needs css
-				echo "<span class = 'largetext'> $title </span> <br><span class = 'smalltext'>Written by $owner. Posted: $time </span><br><a href = 'updatestory.php' class = 'button'>Edit</a><a href = 'deletestory.php' class = 'button'>Delete</a><p>$story</p>";
+				echo "<span class = 'largetext'> $title </span> <br><span class = 'smalltext'>Written by $owner. Posted: $time </span>";
+				if ($user === $_SESSION['user']){
+					echo "<br><a href = 'updatestory.php' class = 'button'>Edit</a><a href = 'deletestory.php' class = 'button'>Delete</a>";
+				}
+				
+				echo "<p>$story</p>";
 				$stmt->close();
-				$comments = $sqli->prepare("select owner, comment from comments where story = ?");
+				$comments = $sqli->prepare("select owner, comment, time from comments where story = ?");
 				$comments->bind_param('s', $id);
 				$comments->execute();
-				$comments->bind_result($user, $comment);
+				$comments->bind_result($user, $comment, $time);
 
-				echo "<div>";
+				echo "<div >";
 				while($comments->fetch()){
+					// .comment needs css
+					echo "<div class = 'comment'>";
 					echo "<div>$user writes:<br><p>$comment</p><br><br></div>";
+					echo "<span class = 'smalltext> Posted: $time.";
+					if ($user === $_SESSION['user']) {
+						echo "&nbsp <a href = 'updatecomment.php'>Edit</a><a href = 'deletecomment.php'>Delete</a>";
+					}
+					echo "</div>";
 				}
 				echo "</div>";
 
 				// ADD PLACE FOR COMMENTING;
 			}
 			else{
-				echo "<h3> Invalid. Story not found</h3>";
+				echo "<h1> Invalid. Story not found</h1>";
 			}
 		?>
 		</div>
