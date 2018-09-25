@@ -25,7 +25,7 @@
 	$quer->bind_result($id);
 
 	$quer->fetch();
-	$link = 'ec2-52-15-37-3.us-east-2.compute.amazonaws.com/~siamabdalilah/newssite/view.php?id='.$id;
+	$link = 'view.php?id='.$id;
 	$quer->close();
 
 	$quer2 = $sqli->prepare('update stories set link = ? where id = ?');
