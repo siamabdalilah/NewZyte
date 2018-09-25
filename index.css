@@ -27,8 +27,7 @@ html{
 .button{
 	background-color: rgb(90, 127, 255);
 	margin-right: 10px;
- 	border-style: solid;
- 	border-color:rgb(90, 127, 255);
+ 	border:none;
  	height: 40px;
 	cursor: pointer;
 	font-size: 25px;
@@ -76,7 +75,6 @@ html{
 .middle{
 	/*position: relative;*/
 	padding-top: 40px;
-	margin-left: 30px;
 }
 a{
 	text-decoration: none;
