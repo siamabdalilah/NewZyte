@@ -12,7 +12,7 @@
 
 	$user = $_SESSION['user'];
 
-	$stmt = $sqli->prepare('insert into stories (owner, sotries, title) values ( ?, ?, ?)');
+	$stmt = $sqli->prepare('insert into stories (owner, stories, title) values ( ?, ?, ?)');
 	$stmt-bind_param('sss', $user, $story, title);
 	$stmt->execute();
 
@@ -23,6 +23,7 @@
 
 	$quer->fetch();
 	$link = 'ec2-52-15-37-3.us-east-2.compute.amazonaws.com/~siamabdalilah/newssite/view?id='.$id;
+	$quer->fetch();
 
 	$quer2->prepare('update stories set link = ? where id = ?');
 	$quer2->bind_param('ss', $link, $id);
