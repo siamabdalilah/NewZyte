@@ -10,7 +10,7 @@
 	$stmt->bind_param('d', $id);
 	$stmt->execute();
 	$stmt->bind_result($usr);
-	if (!stmt->fetch()){
+	if (!$stmt->fetch()){
 		header("Location: index.php");
 		exit;
 	}
