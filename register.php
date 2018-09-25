@@ -8,7 +8,7 @@
 <?php
 	require 'database.php';
 	echo "pass2";
-	if (isset($_POST['user'])){
+	if (isset($_POST['user'])  && isset($_POST['pass']) && isset($_POST['confpass'])){
 		echo "pass";
 		$stmt = $sqli->prepare("select count(*) from users where user_name = ?");
 		$stmt -> bind_param('s', $_POST['user']);
@@ -42,7 +42,7 @@
 			<label>Username:</label>
 			<input type = 'text' name = 'user'/><br>
 			<label>Password:</label>
-			<input type = 'password' mame = 'pass'/><br>
+			<input type = 'password' name = 'pass'/><br>
 			<label>Confirm Password:</label>
 			<input type = 'password' name = 'confpass'/><br>
 			<input type = 'submit'>
