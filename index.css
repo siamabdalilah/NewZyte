@@ -13,7 +13,9 @@ html{
 	float: left;
 	font-style: italic;
 	font-size: 80px;
-	padding-top:35px;
+	/*padding-top:35px;*/
+	display: inline-block;
+
 }
 
 .rightside{
