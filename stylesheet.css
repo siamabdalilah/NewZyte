@@ -120,7 +120,7 @@ a{
 .comment{
 	padding-top: 10px;
 	padding-left: 10px;
-	height: 80px;
+	min-height: 80px;
 	width: 500px;
 }
 
