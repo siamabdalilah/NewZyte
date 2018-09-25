@@ -83,6 +83,8 @@ a{
 	height: 80px;
 	width: 500px;
 	transition: all .5s ease;
+	text-decoration: none;
+	font-size: 20px;
 }
 
 .content:hover{
@@ -94,11 +96,11 @@ a{
 .content:active{
 	background-color: #ece6f5;
 }
-.content > a{
+a.contentwrap{
 	
 	color: rgb(156, 136, 176);
 }
 
-.content > a:visited{
+a.contentwrap:visited{
 	color: rgb(156, 136, 176);
 }
