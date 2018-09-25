@@ -76,8 +76,8 @@ a{
 	border-style: solid;
 	border-bottom: 1px;
 	border-top: 1px;
-	border-right: 0px;
-	border-left: 0px;
+	/*border-right: 0px;
+	border-left: none;*/
 }
 
 .content:hover{
