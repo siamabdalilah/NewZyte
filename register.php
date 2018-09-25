@@ -35,7 +35,7 @@
 			$usrins->execute();
 			session_start();
 			$_SESSION['user'] = $_POST['user'];
-			header("Location: index.php");
+			//header("Location: index.php");
 			exit;
 		}
 	}
