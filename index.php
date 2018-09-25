@@ -82,7 +82,7 @@
 					echo "'>";
 					echo "<div class = 'content'>";
 					echo htmlspecialchars($title);
-					echo "<br><span class = 'smalltext' Written by ";
+					echo "<br><span class = 'smalltext'> Written by ";
 					echo htmlspecialchars($user);
 					echo "&nbsp&nbps Posted: ";
 					echo htmlspecialchars($time);
