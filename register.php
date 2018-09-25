@@ -23,7 +23,10 @@
 			$pass = password_hash($_POST['pass'], PASSWORD_BCRYPT);
 			$usrins = $sqli->prepare("insert into users (user_name, password_hash) values (?, ?)");
 			$usrins->bind_param('ss', $_POST['user'], $pass);
-			echo $usrins;
+			if (!$usrins){
+				header("Location: index.php");
+				exit;
+			}
 			$usrins->execute();
 			session_start();
 			$_SESSION['user'] = $_POST['user'];
