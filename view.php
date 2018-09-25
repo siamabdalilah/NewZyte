@@ -57,7 +57,10 @@
 		<?php
 			if ($stmt->fetch()){
 				// .largetext and .smalltext needs css
-				echo "<span class = 'largetext'> $title </span> <br><span class = 'smalltext'>Written by $owner. Posted: $time </span>";
+				echo "<span class = 'largetext'>"; echo htmlspecialchars($title);
+				echo "</span> <br><span class = 'smalltext'>Written by ";
+				echo htmlspecialchars($owner);
+				echo ". Posted: $time </span>";
 				if (isset($_SESSION['user']) && $owner === $_SESSION['user']){
 					echo "<br><a href = 'updatestory.php?id=$storyid'>Edit</a>&nbsp<a href = 'deletestory.php?id=$storyid'>Delete</a>";
 				}
@@ -73,7 +76,8 @@
 				while($comments->fetch()){
 					// .comment needs css
 					echo "<div class = 'comment'>";
-					echo "$user writes:<br><span class = 'commtext'>$comment</span>";
+					echo htmlspecialchars($user); echo " writes:<br><span class = 'commtext'>";
+					echo htmlspecialchars($comment); echo"</span>";
 					echo "<br><span class = 'smalltext'> Posted: $time. </span>";
 					if (isset($_SESSION['user']) && $user === $_SESSION['user']) {
 						echo "&nbsp <a href = 'updatecomment.php?id=$commid'>Edit</a>&nbsp<a href = 'deletecomment.php?id=$commid'>Delete</a>";

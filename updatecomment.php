@@ -55,7 +55,7 @@
 			<label class = 'largetext'>Comment</label><br><textarea name = 'comment' cols = '50' rows = '4' maxlength="50000" required autofocus><?php echo $comment?></textarea><br>
 			<input type = 'hidden' value = "<?php echo $id?>" name = 'id'/>
 			<input type = 'hidden' value = "<?php echo $storyid?>" name = 'story'/>
-			<input type = 'submit' class = 'submitbutton'/>
+			<input value = 'update' type = 'submit' class = 'submitbutton'/>
 		</form>
 	</div>
 </body>
