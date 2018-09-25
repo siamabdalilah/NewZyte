@@ -6,7 +6,7 @@
 		header("Location: index.php");
 		exit;
 	}
-	$stmt = $sqli->prepare('select count(*) from stories where id = ?');
+	$stmt = $sqli->prepare('select story from stories where id = ?');
 	$stmt->bind_param('s', $id);
 	$stmt->execute();
 	$stmt->bind_result($usr);
