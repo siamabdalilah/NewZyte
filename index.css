@@ -18,7 +18,7 @@ html{
 
 .rightside{
 	/*position: relative;*/
-	top:40px; 
+	padding-top:40px; 
 	float: right;
 	font-size: 30px;
 }
