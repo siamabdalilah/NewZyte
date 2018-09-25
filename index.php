@@ -14,7 +14,7 @@
 		
 		if (password_verify($pass, $hash)){
 			$_SESSION['user'] = $_POST['user_name'];
-			while(hashret->fetch()){
+			while($hashret->fetch()){
 				// do nothing
 			}
 		}
