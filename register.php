@@ -1,6 +1,8 @@
 <?php
 	require 'database.php';
+	echo "pass";
 	if (isset($_POST['user']) && isset($_POST['pass']) && isset($_POST['confpass'])){
+		echo "pass";
 		$stmt = $sqli->prepare("select count(*) from users where user_name = ?");
 		$stmt -> bind_param('s', $_POST['user']);
 		$stmt->execute();
@@ -29,7 +31,7 @@
 
 <!doctype html>
 
-<html>
+<html lang = 'en'>
 	<head>
 		<title>Create New User</title>
 	</head>
