@@ -39,7 +39,7 @@
 
 						echo "&nbsp <a href = 'logout.php' class = 'button'> Log Out</a>&nbsp";
 						echo "<a href = 'insertstory.php' class = 'button'>Add Story</a><br>
-							<a href = 'index.php' class = 'button'>Go Back to Home Page</a>";
+							<a href = 'index.php' class = 'button'>Home</a>";
 
 					}
 					else{
@@ -60,7 +60,7 @@
 				// .largetext and .smalltext needs css
 				echo "<span class = 'largetext'> $title </span> <br><span class = 'smalltext'>Written by $owner. Posted: $time </span>";
 				if ($owner === $_SESSION['user']){
-					echo "<br><a href = 'updatestory.php' class = 'button'>Edit</a>&nbsp<a href = 'deletestory.php' class = 'button'>Delete</a>";
+					echo "<br><a href = 'updatestory.php'>Edit</a>&nbsp<a href = 'deletestory.php'>Delete</a>";
 				}
 				
 				echo "<p>$story</p>";
