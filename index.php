@@ -43,9 +43,8 @@
 			</div>
 		</div>
 
-		<!-- <div class = 'middle'>
-			<!-- List all stories -->
-			<!-- <?php
+		<div class = 'middle'>
+			<?php
 				// $stmt = $sqli->prepare("select title, link, owner, time from stories");
 				// if (!$stmt){
 				// 	printf("Query Prep Failed: %s\n", $sqli->error);
@@ -67,7 +66,7 @@
 				// 	echo htmlspecialchars($time);
 				// 	echo "</span></div></a>";
 				// }
-			?> -->
-		<!-- </div> --> -->
+			?>
+		</div>
 	</body>
 </html>
