@@ -6,14 +6,14 @@
 
 	$id = isset($_GET['id'])? $_GET['id'] : null;
 	$usr = isset($_SESSION['user'])? $_SESSION['user'] : null;
-	$stmt = $sqli->prepare("select title, stories, owner from stories where id = ?");
+	$stmt = $sqli->prepare("select title, stories, owner, time from stories where id = ?");
 	$stmt->bind_param('s', $id);
 	if(!$stmt){
 		printf("Query Prep Failed: %s\n", $sqli->error);
 		exit;
 	}	
 	$stmt->execute();
-	$stmt->bind_result($title, $story, $owner);
+	$stmt->bind_result($title, $story, $owner, $time);
 
 
 ?>
@@ -52,7 +52,8 @@
 		<div class = 'middle'>
 		<?php
 			if ($stmt->fetch()){
-				echo "<h3> $title </h3> <br>Written by $owner<br><p>$story</p>";
+				// .largetext and .smalltext needs css
+				echo "<span class = 'largetext'> $title </span> <br><span class = 'smalltext'>Written by $owner. Posted: $time </span><br><a href = 'updatestory.php' class = 'button'>Edit</a><a href = 'deletestory.php' class = 'button'>Delete</a><p>$story</p>";
 				$stmt->close();
 				$comments = $sqli->prepare("select owner, comment from comments where story = ?");
 				$comments->bind_param('s', $id);
