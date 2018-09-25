@@ -30,11 +30,12 @@
 <!doctype html>
 
 <html lang = 'en'>
-<head>
-	<title>Add Story</title>
-</head>
-<body>
-	<div class = 'top'>
+	<head>
+		<title>Add Story</title>
+		<link href = 'stylesheet.css' rel ='stylesheet' type = 'text/css'/>
+	</head>
+	<body>
+		<div class = 'top'>
 			<div class = 'title'>
 				NewZyte
 			</div>
@@ -50,12 +51,13 @@
 			</div>
 		</div>
 
-	<div class = 'middle'>
-		<form action = 'commentinserter.php' method = 'post'>
-			<label class = 'largetext'>Comment</label><br><textarea name = 'comment' cols = '50' rows = '4' maxlength="50000" required autofocus><?php echo $comment?></textarea><br>
-			<input type = 'hidden' value = "<?php echo $id?>" name = 'id'/>
-			<input type = 'hidden' value = "<?php echo $storyid?>" name = 'story'/>
-			<input value = 'update' type = 'submit' class = 'submitbutton'/>
-		</form>
-	</div>
-</body>
+		<div class = 'middle'>
+			<form action = 'commentinserter.php' method = 'post'>
+				<label class = 'largetext'>Comment</label><br><textarea name = 'comment' cols = '50' rows = '4' maxlength="50000" required autofocus><?php echo $comment?></textarea><br>
+				<input type = 'hidden' value = "<?php echo $id?>" name = 'id'/>
+				<input type = 'hidden' value = "<?php echo $storyid?>" name = 'story'/>
+				<input value = 'update' type = 'submit' class = 'submitbutton'/>
+			</form>
+		</div>
+	</body>
+</html>

@@ -33,9 +33,10 @@
 <html lang = 'en'>
 <head>
 	<title>Add Story</title>
+	<link href = 'stylesheet.css' rel ='stylesheet' type = 'text/css'/>
 </head>
-<body>
-	<div class = 'top'>
+	<body>
+		<div class = 'top'>
 			<div class = 'title'>
 				NewZyte
 			</div>
@@ -52,13 +53,14 @@
 			</div>
 		</div>
 
-	<div class = 'middle'>
-		<form action = 'storyupdater.php' method = 'post'>
-			<label class = 'largetext'>Add Story Title:</label><br><textarea name = 'title' cols = '150' maxlength="150" autofocus required><?php echo $title?></textarea><br>
-			<label class = 'largetext'>Story</label><br><textarea name = 'story' cols = '150' rows = '30' maxlength="50000" required><?php echo $story?></textarea><br>
-			<input type = 'hidden' name = 'id' value = "<?php echo $id ?>"/>
-			<input value = 'update' type = 'submit' class = 'submitbutton'/>
+		<div class = 'middle'>
+			<form action = 'storyupdater.php' method = 'post'>
+				<label class = 'largetext'>Add Story Title:</label><br><textarea name = 'title' cols = '150' maxlength="150" autofocus required><?php echo $title?></textarea><br>
+				<label class = 'largetext'>Story</label><br><textarea name = 'story' cols = '150' rows = '30' maxlength="50000" required><?php echo $story?></textarea><br>
+				<input type = 'hidden' name = 'id' value = "<?php echo $id ?>"/>
+				<input value = 'update' type = 'submit' class = 'submitbutton'/>
 
-		</form>
-	</div>
-</body>
+			</form>
+		</div>
+	</body>
+</html>
