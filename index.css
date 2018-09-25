@@ -92,6 +92,9 @@ h6.visited{
 	text-decoration:none;
 	color: rgb(156, 136, 176);
 }
+h6{
+	color: rgb(156, 136, 176);
+}
 
 .content:hover{
 	transform: scale(1.05);
