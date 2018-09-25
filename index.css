@@ -77,7 +77,7 @@ a{
 .content:hover{
 	transform: scale(1.05);
 	box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
-	translate: transform(30px, 0%);
+	translate: transform(50%, 0%);
 }
 
 .content:active{
