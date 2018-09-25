@@ -4,7 +4,7 @@ html{
 
 .top{
 	background-color: rgb(211, 245, 255);
-	/*position:relative;*/
+	position:relative;
 	height: 180px;
 }
 
