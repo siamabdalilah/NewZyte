@@ -11,7 +11,7 @@
 <html lang = 'en'>
 	<head>
 		<title>NewZyte</title>
-		<link href = 'index.css' rel = 'stylesheet' type = 'text/css'/>
+		<link href = 'stylesheet.css' rel = 'stylesheet' type = 'text/css'/>
 	</head>
 
 	<body>

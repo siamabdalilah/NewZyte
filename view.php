@@ -21,6 +21,10 @@
 <!doctype html>
 
 <html lang = 'en'>
+	<head>
+		<title>View Story</title>
+		<link href = 'stylesheet.css' rel = "stylesheet" type = 'text/css'/>
+	</head>
 	<body>
 		<div class = 'top'>
 			<div class = 'title'>
