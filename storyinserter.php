@@ -17,9 +17,9 @@
 	$stmt->execute();
 
 	
-	$stmt = null;;
+	$stmt->close();
 
-	$quer = $sqli->prepare('select id from strories where title = ?');
+	$quer = $sqli->prepare('select id from stories where title = ?');
 	$quer->bind_param('s', $title);
 	$quer->execute();
 	$quer->bind_result($id);
