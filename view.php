@@ -69,7 +69,7 @@
 				
 				echo "<br><br><p>$story</p>";
 				$stmt->close();
-				$comments = $sqli->prepare("select owner, comment, id, time from comments where story = ?");
+				$comments = $sqli->prepare("select owner, comment, id, time from comments where story = ? order by time desc");
 				$comments->bind_param('s', $id);
 				$comments->execute();
 				$comments->bind_result($user, $comment, $commid, $time);
