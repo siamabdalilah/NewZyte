@@ -72,8 +72,9 @@ a{
 	height: 80px;
 	width: 500px;
 	transition: all .5s ease;
-	border-top: 5px;
+	border-top: 1px;
 	border-color: black; 
+	border-style: solid;
 	border-bottom: 1px;
 }
 
