@@ -17,7 +17,8 @@
 	$stmt->execute();
 
 	
-	$stmt->close();
+	$stmt = null;;
+
 	$quer = $sqli->prepare('select id from strories where title = ?');
 	$quer->bind_param('s', $title);
 	$quer->execute();
