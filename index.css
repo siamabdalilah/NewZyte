@@ -5,7 +5,7 @@ html{
 .top{
 	background-color: rgb(211, 245, 255);
 	/*position:relative;*/
-	height: 250px;
+	height: 200px;
 }
 
 .title{
@@ -13,12 +13,12 @@ html{
 	float: left;
 	font-style: italic;
 	font-size: 80px;
-	padding-top:75px;
+	padding-top:65px;
 }
 
 .rightside{
 	/*position: relative;*/
-	padding-top:100px; 
+	padding-top:85px; 
 	float: right;
 	font-size: 30px;
 }
