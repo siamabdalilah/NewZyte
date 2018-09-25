@@ -74,10 +74,10 @@ a{
 	transition: all .5s ease;
 	border-color: gray; 
 	border-style: solid;
-	border-bottom: 1px;
+	border-bottom: 2px;
 	border-top: 1px;
-	/*border-right: 0px;
-	border-left: none;*/
+	border-right: 0px;
+	border-left: 0px;
 }
 
 .content:hover{
