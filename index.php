@@ -84,7 +84,7 @@
 					echo htmlspecialchars($title);
 					echo "<br><span class = 'smalltext'> Written by ";
 					echo htmlspecialchars($user);
-					echo "&nbsp&nbps Posted: ";
+					echo ". Posted: ";
 					echo htmlspecialchars($time);
 					echo "</span></div></a>";
 				}
