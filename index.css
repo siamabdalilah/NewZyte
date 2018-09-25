@@ -45,7 +45,7 @@ html{
 
 .button:hover{
 	color: rgb(90, 127, 255);
-	background-color: white;
+	background-color: gray;
 	/*border-style: solid;
 	border-color: white;*/
 }
