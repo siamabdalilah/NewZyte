@@ -50,7 +50,6 @@
 				?>
 		</div>
 		<div class = 'middle'>
-			<span style = "font-size: 15px;"> Comments:</span><br>
 		<?php
 			if ($stmt->fetch()){
 				// .largetext and .smalltext needs css
@@ -61,26 +60,27 @@
 				
 				echo "<p>$story</p>";
 				$stmt->close();
-				$comments = $sqli->prepare("select owner, comment, time from comments where story = ?");
+				$comments = $sqli->prepare("select owner, comment, id, time from comments where story = ?");
 				$comments->bind_param('s', $id);
 				$comments->execute();
-				$comments->bind_result($user, $comment, $time);
+				$comments->bind_result($user, $comment, $commid, $time);
 
-				echo "<div >";
+				echo "</div><div class = 'middle'>";
 				while($comments->fetch()){
 					// .comment needs css
 					echo "<div class = 'comment'>";
 					echo "$user writes:<br>$comment";
 					echo "<br><span class = 'smalltext'> Posted: $time. </span>";
 					if ($user === $_SESSION['user']) {
-						echo "&nbsp <a href = 'updatecomment.php'>Edit</a><a href = 'deletecomment.php'>Delete</a>";
+						echo "&nbsp <a href = 'updatecomment.php?id=$commid'>Edit</a>&nbsp<a href = 'deletecomment.php?id=$commid'>Delete</a>";
 					}
 					echo "</div>";
 				}
-				echo "</div>";
+				echo "</div><div class = 'middle'>";
 
 				echo "<a href = 'insertcomment.php?id="; echo $id;
 				echo "' class = 'button'>Add Comment</a>";
+				echo "</div>";
 
 				// ADD PLACE FOR COMMENTING;
 			}
