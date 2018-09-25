@@ -21,12 +21,12 @@
 		if ($count != 0){
 			echo "Username already exists<br>";
 		}
-		$stmt->fetch();
 
 		else if (!($_POST['pass'] === $_POST['confpass'])){
 			echo "Passwords do no match<br>";
 		}
 		else{
+			$stmt->fetch();
 			$pass = password_hash($_POST['pass'], PASSWORD_BCRYPT);
 			$usrins = $sqli->prepare("insert into users (user_name, password_hash) values ( ?, ? )");
 			if (!$usrins){
