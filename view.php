@@ -38,7 +38,7 @@
 						echo htmlspecialchars($_SESSION['user']);
 
 						echo "&nbsp <a href = 'logout.php' class = 'button'> Log Out</a>&nbsp";
-						echo "<a href = 'insertstory.php' class = 'button'>Add Story</a><br>
+						echo "<a href = 'insertstory.php' class = 'button'>Add Story</a>&nbsp
 							<a href = 'index.php' class = 'button'>Home</a>";
 
 					}
@@ -63,7 +63,7 @@
 					echo "<br><a href = 'updatestory.php'>Edit</a>&nbsp<a href = 'deletestory.php'>Delete</a>";
 				}
 				
-				echo "<p>$story</p>";
+				echo "<br><br><br><p>$story</p>";
 				$stmt->close();
 				$comments = $sqli->prepare("select owner, comment, id, time from comments where story = ?");
 				$comments->bind_param('s', $id);
