@@ -13,17 +13,15 @@ html{
 	float: left;
 	font-style: italic;
 	font-size: 80px;
-	/*padding-top:35px;*/
-	/*display: inline-block;*/
-	vertical-align: middle;
-
+	padding-top:35px;
 }
 
 .rightside{
 	/*position: relative;*/
-	padding-top:70px; 
+	/*padding-top:70px; */
 	float: right;
 	font-size: 30px;
+	margin:0 auto;
 }
 
 .button{
