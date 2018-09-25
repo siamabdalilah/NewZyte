@@ -1,6 +1,13 @@
+<!doctype html>
+
+<html lang = 'en'>
+	<head>
+		<title>Create New User</title>
+	</head>
+
 <?php
 	require 'database.php';
-	echo "pass";
+	echo "pass2";
 	if (isset($_POST['user']) && isset($_POST['pass']) && isset($_POST['confpass'])){
 		echo "pass";
 		$stmt = $sqli->prepare("select count(*) from users where user_name = ?");
@@ -29,12 +36,7 @@
 
 
 
-<!doctype html>
 
-<html lang = 'en'>
-	<head>
-		<title>Create New User</title>
-	</head>
 	<body>
 		<form action = "<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method = 'post'>
 			<label>Username:</label>
