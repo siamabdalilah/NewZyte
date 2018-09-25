@@ -1,7 +1,9 @@
 <?php
 	session_start();
 	require 'database.php';
-	//if (isset$_SESSION['user'])
+	require 'login.php';
+
+
 	$id = isset($_GET['id'])? $_GET['id'] : null;
 	$usr = isset($_SESSION['user'])? $_SESSION['user'] : null;
 	$stmt = $sqli->prepare("select title, stories, owner from stories where id = ?");
