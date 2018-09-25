@@ -86,10 +86,11 @@ a{
 	text-decoration: none;
 }
 .content:visited{
-	text-decoration: none;
+	color: rgb(156, 136, 176);
 }
-h6{
+h6.visited{
 	text-decoration:none;
+	color: rgb(156, 136, 176);
 }
 
 .content:hover{
