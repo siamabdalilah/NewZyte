@@ -44,9 +44,12 @@ html{
 	/*position: relative;*/
 	padding-top: 40px;
 }
+a{
+	text-decoration: none;
+}
 
 a.content{
-	text-decoration: none;
+	
 	color: rgb(156, 136, 176);
 }
 
