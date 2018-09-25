@@ -16,12 +16,8 @@
 	$stmt->bind_param('sss', $user, $story, $title);
 	$stmt->execute();
 
-	while ($stmt->fetch()){
-		// do nothing
-		
-	}
-
-
+	
+	mysql_free_result($stmt);
 	$quer = $sqli->prepare('select id from strories where title = ?');
 	$quer->bind_param('s', $title);
 	$quer->execute();
