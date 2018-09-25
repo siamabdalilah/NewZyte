@@ -72,7 +72,9 @@
 				$stmt->bind_result($title, $link);
 
 				while($stmt->fetch()){
-					echo "<a href = '{htmlspecialchars($link)}'>{htmlspecialchars($title)}</a><br><br>";
+					echo "<a href = '"; echo htmlspecialchars($link); echo "'>";
+					echo htmlspecialchars($title);
+					echo "</a><br><br>";
 				}
 			?>
 		</div>
