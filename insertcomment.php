@@ -30,7 +30,7 @@
 <body>
 	<?php
 		if ($flag){
-			echo "fml";
+			echo $usr;
 			exit;
 		}
 	?>
