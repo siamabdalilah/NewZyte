@@ -14,7 +14,10 @@ html{
 	font-style: italic;
 	font-size: 80px;
 	/*padding-top:35px;*/
-	display: inline-block;
+	/*display: inline-block;*/
+	margin:auto;
+	top:0;
+	bottom: 0;
 
 }
 
