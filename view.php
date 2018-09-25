@@ -56,7 +56,7 @@
 				// .largetext and .smalltext needs css
 				echo "<span class = 'largetext'> $title </span> <br><span class = 'smalltext'>Written by $owner. Posted: $time </span>";
 				if ($user === $_SESSION['user']){
-					echo "<br><a href = 'updatestory.php' class = 'button'>Edit</a><a href = 'deletestory.php' class = 'button'>Delete</a>";
+					echo "<br><a href = 'updatestory.php' class = 'button'>Edit</a>&nbsp<a href = 'deletestory.php' class = 'button'>Delete</a>";
 				}
 				
 				echo "<p>$story</p>";
@@ -78,6 +78,9 @@
 					echo "</div>";
 				}
 				echo "</div>";
+
+				echo "<a href = 'insertcomment.php?id="; echo $id;
+				echo "' class = 'button'>Add Comment</a>";
 
 				// ADD PLACE FOR COMMENTING;
 			}

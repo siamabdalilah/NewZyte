@@ -35,7 +35,7 @@
 	<div class = 'middle'>
 		<form action = 'storyinserter.php' method = 'post'>
 			<label class = 'largetext'>Add Story Title:</label><br><textarea name = 'title' cols = '150' maxlength="150" autofocus required></textarea><br>
-			<label class = 'largetext'>Story</label><br><textarea name = 'story' cols = '150' rows = '50' maxlength="50000" required></textarea><br>
+			<label class = 'largetext'>Story</label><br><textarea name = 'story' cols = '150' rows = '30' maxlength="50000" required></textarea><br>
 			<input type = 'submit' class = 'submitbutton'/>
 
 		</form>
