@@ -76,6 +76,10 @@ html{
 	padding-top: 40px;
 	width: 530px;
 }
+.middle2{
+	padding-top: 40px;
+	width: 800px;
+}
 a{
 	text-decoration: none;
 	color:rgb(156, 136, 176);;
@@ -103,4 +107,19 @@ a{
 .smalltext{
 	font-size: 10px;
 	color: lightgray;
+}
+
+.largetext{
+	font-size: 20px;
+}
+
+.commtext{
+	font-color: lightgray;
+}
+
+.comment{
+	padding-top: 10px;
+	padding-left: 10px;
+	height: 80px;
+	width: 500px;
 }

@@ -49,7 +49,7 @@
 					}
 				?>
 		</div>
-		<div class = 'middle'>
+		<div class = 'middle2'>
 		<?php
 			if ($stmt->fetch()){
 				// .largetext and .smalltext needs css
@@ -69,7 +69,7 @@
 				while($comments->fetch()){
 					// .comment needs css
 					echo "<div class = 'comment'>";
-					echo "$user writes:<br>$comment";
+					echo "$user writes:<br><span class = 'commtext'>$comment</span>";
 					echo "<br><span class = 'smalltext'> Posted: $time. </span>";
 					if ($user === $_SESSION['user']) {
 						echo "&nbsp <a href = 'updatecomment.php?id=$commid'>Edit</a>&nbsp<a href = 'deletecomment.php?id=$commid'>Delete</a>";
@@ -82,7 +82,6 @@
 				echo "' class = 'button'>Add Comment</a>";
 				echo "</div>";
 
-				// ADD PLACE FOR COMMENTING;
 			}
 			else{
 				echo "<h1> Invalid. Story not found</h1>";
