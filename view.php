@@ -55,7 +55,7 @@
 			if ($stmt->fetch()){
 				// .largetext and .smalltext needs css
 				echo "<span class = 'largetext'> $title </span> <br><span class = 'smalltext'>Written by $owner. Posted: $time </span>";
-				if ($user === $_SESSION['user']){
+				if ($owner === $_SESSION['user']){
 					echo "<br><a href = 'updatestory.php' class = 'button'>Edit</a>&nbsp<a href = 'deletestory.php' class = 'button'>Delete</a>";
 				}
 				
@@ -70,7 +70,7 @@
 				while($comments->fetch()){
 					// .comment needs css
 					echo "<div class = 'comment'>";
-					echo "<div>$user writes:<br><p>$comment</p><br><br></div>";
+					echo "$user writes:<br>$comment";
 					echo "<span class = 'smalltext> Posted: $time.";
 					if ($user === $_SESSION['user']) {
 						echo "&nbsp <a href = 'updatecomment.php'>Edit</a><a href = 'deletecomment.php'>Delete</a>";
