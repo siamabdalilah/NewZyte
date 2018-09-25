@@ -97,7 +97,7 @@ a{
 	background-color: #ece6f5;
 }
 
-span.smalltext{
-	font-size: 5px;
+.smalltext{
+	font-size: 10px;
 	color: lightgray;
 }
