@@ -83,8 +83,10 @@ a{
 	height: 80px;
 	width: 500px;
 	transition: all .5s ease;
-	
-	
+	text-decoration: none;
+}
+.content:visited{
+	text-decoration: none;
 }
 
 .content:hover{
