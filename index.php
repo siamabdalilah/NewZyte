@@ -80,13 +80,13 @@
 				while($stmt->fetch()){
 					echo "<a class = 'contentwrap' href = '"; echo htmlspecialchars($link);
 					echo "'>";
-					echo "<div class = 'content'><h6>";
+					echo "<div class = 'content'>";
 					echo htmlspecialchars($title);
-					echo "</h6><br>Written by ";
+					echo "<br><span class = 'smalltext' Written by ";
 					echo htmlspecialchars($user);
-					echo "&nbsp &nbps Posted: ";
+					echo "&nbsp&nbps Posted: ";
 					echo htmlspecialchars($time);
-					echo "</div></a>";
+					echo "</span></div></a>";
 				}
 			?>
 		</div>

@@ -96,3 +96,8 @@ a{
 .content:active{
 	background-color: #ece6f5;
 }
+
+.smalltext{
+	font-size:10 px;
+	color: lightgray;
+}
