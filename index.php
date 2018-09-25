@@ -14,13 +14,13 @@
 		
 		if (password_verify($pass, $hash)){
 			$_SESSION['user'] = $_POST['user_name'];
-			while($hashret->fetch()){
-				// do nothing
-			}
 		}
 
 		else{
 			$flag = true;
+		}
+		while($hashret->fetch()){
+			// do nothing
 		}
 	}
 ?>
