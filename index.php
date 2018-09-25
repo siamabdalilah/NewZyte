@@ -43,31 +43,31 @@
 			</div>
 		</div>
 
-		<div class = 'middle'>
+		<!-- <div class = 'middle'>
 			<!-- List all stories -->
-			<?php
-				$stmt = $sqli->prepare("select title, link, owner, time from stories");
-				if (!$stmt){
-					printf("Query Prep Failed: %s\n", $sqli->error);
-					exit;
-				}
+			<!-- <?php
+				// $stmt = $sqli->prepare("select title, link, owner, time from stories");
+				// if (!$stmt){
+				// 	printf("Query Prep Failed: %s\n", $sqli->error);
+				// 	exit;
+				// }
 
-				$stmt->execute();
+				// $stmt->execute();
 
-				$stmt->bind_result($title, $link, $user, $time);
+				// $stmt->bind_result($title, $link, $user, $time);
 
-				while($stmt->fetch()){
-					echo "<a class = 'contentwrap' href = '"; echo htmlspecialchars($link);
-					echo "'>";
-					echo "<div class = 'content'>";
-					echo htmlspecialchars($title);
-					echo "<br><span class = 'smalltext'> Written by ";
-					echo htmlspecialchars($user);
-					echo ". Posted: ";
-					echo htmlspecialchars($time);
-					echo "</span></div></a>";
-				}
-			?>
-		</div>
+				// while($stmt->fetch()){
+				// 	echo "<a class = 'contentwrap' href = '"; echo htmlspecialchars($link);
+				// 	echo "'>";
+				// 	echo "<div class = 'content'>";
+				// 	echo htmlspecialchars($title);
+				// 	echo "<br><span class = 'smalltext'> Written by ";
+				// 	echo htmlspecialchars($user);
+				// 	echo ". Posted: ";
+				// 	echo htmlspecialchars($time);
+				// 	echo "</span></div></a>";
+				// }
+			?> -->
+		<!-- </div> --> -->
 	</body>
 </html>
