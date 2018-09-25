@@ -45,8 +45,8 @@
 						if ($flag){
 							echo "<span class = 'wrong'>Invalid. Please try again</span> &nbsp";
 						}
-						echo "<form action = '"; echo htmlentities($_SERVER['PHP_SELF']); 
-						echo "' method = 'POST'><label class = 'label'>Username:   </label><input type = 'text' name = 'user_name' class = 'input'/>&nbsp
+						echo "<form action = 'view.php'";
+						echo " method = 'POST'><label class = 'label'>Username:   </label><input type = 'text' name = 'user_name' class = 'input'/>&nbsp
 						<label class = 'label'>Password:   </label><input type = 'Password' name = 'password' class = 'input'/><input type = 'submit' class = 'submitbutton' value = 'Login'/></form>";
 						echo "<a href = 'register.php' class = 'button'> Register new User</a>";
 					}
