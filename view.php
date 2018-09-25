@@ -27,7 +27,8 @@
 		<?php
 			if ($stmt->fetch()){
 				echo "<h3> $title </h3> <br>Written by $owner<br><p>$story</p>";
-				$comments = $sqli->preapre("select owner, comment from comments where story = ?");
+				$stmt->close();
+				$comments = $sqli->prepare("select owner, comment from comments where story = ?");
 				$comments->bind_param('s', $id);
 				$comments->execute();
 				$comments->bind_result($user, $comment);

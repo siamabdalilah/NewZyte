@@ -4,7 +4,7 @@
 	$flag = false;
 
 	if (isset($_POST['user_name']) && isset($_POST['password'])){
-		$pass = $_POST['password'];
+		$pass = htmlentities($_POST['password']);
 		$hashret = $sqli->prepare('select password_hash from users where user_name = ?');
 		$hashret->bind_param('s', $_POST['user_name']);
 
@@ -31,31 +31,37 @@
 
 <html lang = 'en'>
 	<head>
-		<title>NewsSite</title>
+		<title>NewZyte</title>
 
 	</head>
 
 	<body>
-		<div>
+		<div class = 'top'>
+			<div class = 'title'>
+				NewZyte
+			</div>
 
-			<?php
-				if (isset($_SESSION['user'])){
-					echo htmlspecialchars($_SESSION['user']);
+			<div class = 'rightside'>
+				<?php
+					if (isset($_SESSION['user'])){
+						echo "Welcome, ";
+						echo htmlspecialchars($_SESSION['user']);
 
-					echo "<br> <a href = \"logout.php\"> Log Out</a><br>";
-					echo "<a href = 'insertstory.php'>Add Story</a><br><br><br>";
+						echo "&nbsp <a href = 'logout.php' class = 'button'> Log Out</a>&nbsp";
+						echo "<a href = 'insertstory.php' class = 'button'>Add Story</a><br>";
 
-				}
-				else{
-					if ($flag){
-						echo "Invalid. Please try again<br>";
 					}
-					echo "<form action = '"; echo htmlentities($_SERVER['PHP_SELF']); 
-					echo "' method = 'POST'><label>Username:</label><input type = 'text' name = 'user_name'/><br>
-					<label>Password</label><input type = 'Password' name = 'password'/><input type = 'submit'/></form>";
-					echo "<a href = 'register.php'> Register new User</a>";
-				}
-			?>
+					else{
+						if ($flag){
+							echo "<span class = 'wrong'>Invalid. Please try again</span> &nbsp";
+						}
+						echo "<form action = '"; echo htmlentities($_SERVER['PHP_SELF']); 
+						echo "' method = 'POST'><label class = 'label'>Username:   </label><input type = 'text' name = 'user_name' class = 'input'/>&nbsp
+						<label class = 'label'>Password:   </label><input type = 'Password' name = 'password' class = 'input'/><input type = 'submit' class = 'submitbutton'/></form>";
+						echo "<a href = 'register.php' class = 'button'> Register new User</a>";
+					}
+				?>
+			</div>
 		</div>
 
 		<div>
