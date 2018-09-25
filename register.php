@@ -18,7 +18,7 @@
 		if ($count != 0){
 			echo "Username already exists<br>";
 		}
-		else if ($_POST['pass'] !== $_POST['confpass']){
+		else if (!($_POST['pass'] === $_POST['confpass']){
 			echo "Passwords do no match<br>";
 		}
 		else{
