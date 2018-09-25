@@ -5,7 +5,7 @@ html{
 .top{
 	background-color: rgb(211, 245, 255);
 	/*position:relative;*/
-	height: 100px;
+	height: 250px;
 }
 
 .title{
@@ -13,7 +13,7 @@ html{
 	float: left;
 	font-style: italic;
 	font-size: 50px;
-	padding-top:15px;
+	padding-top:40%;
 }
 
 .rightside{
@@ -31,7 +31,7 @@ html{
  	width: 150px;
 	cursor: pointer;
 	font-size: 20px;
-	padding-top: 13px;
+	padding-top: 45%;
 	text-align: center;
 	display: inline-block;
 }
