@@ -13,7 +13,7 @@
 		$stmt = $sqli->prepare("select count(*) from users where user_name = ?");
 		$stmt -> bind_param('s', $_POST['user']);
 		$stmt->execute();
-		$stmt->bind_result($count)
+		$stmt->bind_result($count);
 
 		if ($count != 0){
 			echo "Username already exists<br>";
