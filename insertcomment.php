@@ -6,18 +6,19 @@
 		header("Location: index.php");
 		exit;
 	}
-	$stmt = $sqli->prepare('select stories from stories where id = ?');
+	$id = $_GET['id'];
+	$stmt = $sqli->prepare('select count(*) from stories where id = ?');
 	$stmt->bind_param('s', $id);
 	$stmt->execute();
 	$stmt->bind_result($usr);
-	// $flag = false;
-	if (!$stmt->fetch()){
-		// $flag = true;
+	$flag = false;
+	$stmt->fetch();
+	if (!($usr === 1)_{
 		header("Location: index.php");
 		exit;
 	}
 	$stmt->close();
-	$id = $_GET['id'];
+	
 
 ?>
 
