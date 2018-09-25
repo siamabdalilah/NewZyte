@@ -45,6 +45,6 @@ html{
 	padding-top: 40px;
 }
 
-a:visited{
-	none;
+a{
+	text-decoration: none;
 }
