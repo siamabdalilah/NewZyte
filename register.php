@@ -23,7 +23,7 @@
 			$pass = password_hash($_POST['pass'], PASSWORD_BCRYPT);
 			$usrins = $sqli->prepare("insert into users (user_name, password_hash) values ( ?, ? )");
 			if (!$usrins){
-				echo sqli->errno;
+				echo $sqli->errno;
 				exit;
 			}
 			$usrins->bind_param('ss', $_POST['user'], $pass);
