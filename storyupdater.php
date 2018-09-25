@@ -12,7 +12,7 @@
 	$id = $_POST['id'];
 	$user = $_SESSION['user'];
 
-	$stmt = $sqli->prepare('update stories (stories, title) values (?, ?) where id = ?');
+	$stmt = $sqli->prepare('update stories set stories = ?, title = ? where id = ?');
 	$stmt->bind_param('sss', $story, $title, $id);
 	$stmt->execute();
 
