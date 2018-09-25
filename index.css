@@ -23,7 +23,7 @@ html{
 	font-size: 30px;
 	position: absolute;
   	top: 50%; right: 50%;
-  transform: translate(0%, 0%);
+  transform: translate(0%, -50%);
 }
 
 .button{
