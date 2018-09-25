@@ -52,6 +52,7 @@
 						echo "<a href = 'register.php' class = 'button'> Register new User</a>";
 					}
 				?>
+			</div>
 		</div>
 		<div class = 'middle2'>
 		<?php
