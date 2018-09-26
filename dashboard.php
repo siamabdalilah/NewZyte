@@ -29,7 +29,7 @@
 					echo "Welcome, ";
 					echo htmlspecialchars($_SESSION['user']);
 
-					echo "&nbsp <a href = '$outlink' class = 'button'> Log Out</a>&nbsp";
+					echo "&nbsp <a href = 'logout.php' class = 'button'> Log Out</a>&nbsp";
 					echo "<a href = 'insertstory.php' class = 'button'>Add Story</a>&nbsp<a href = 'index.php' class = 'button'>Home</a>";
 				?>
 			</div>
@@ -52,7 +52,7 @@
 					echo htmlspecialchars($title);
 					echo "<br>$hidd";
 					echo "</span></div></a>";
-					echo "<br><a href = 'togglehidden.php?id=".$id."'>Toggle-Hidden</a><br><br>";
+					echo "<span style = 'font-size: 10px;'><a href = 'togglehidden.php?id=".$id."'>&nbspToggle-Hidden</a></span><br><br>";
 				}
 			?>
 		</div>
