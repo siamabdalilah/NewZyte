@@ -17,9 +17,9 @@
 
 	if ($stmt->fetch()){
 		$stmt->close();
-		$ins = '0';
+		$ins = 0;
 		if ($hidd == 0){
-			$ins == '1';
+			$ins == 1;
 		}
 
 		$query = $sqli->prepare('update stories set hidd = ? where id = ?');
