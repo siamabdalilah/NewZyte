@@ -11,7 +11,7 @@
 	if(!$stmt){
 		printf("Query Prep Failed: %s\n", $sqli->error);
 		exit;
-	}	
+	}
 	$stmt->execute();
 	$stmt->bind_result($title, $story, $owner, $time, $hidd, $storyid);
 	$link = 'view.php';
@@ -58,7 +58,7 @@
 						}
 						echo "<form action = '$link' method = 'POST'><label class = 'label'>Username:   </label><input type = 'text' name = 'user_name' class = 'input'/>&nbsp
 						<label class = 'label'>Password:   </label><input type = 'Password' name = 'password' class = 'input'/><input type = 'submit' class = 'submitbutton' value = 'Login'/></form>";
-						echo "<a href = 'register.php' class = 'button'> Register new User</a>";
+						echo "<a href = 'register.php' class = 'button'> Register new User</a>&npsp<a href = 'index.php' class = 'button'>Home</a>";
 					}
 				?>
 			</div>
@@ -74,7 +74,7 @@
 				if (isset($_SESSION['user']) && $owner === $_SESSION['user']){
 					echo "<br><a href = 'updatestory.php?id=$storyid'>Edit</a>&nbsp<a href = 'deletestory.php?id=$storyid'>Delete</a>";
 				}
-				
+
 				echo "<br><br><p>$story</p>";
 				$stmt->close();
 				$comments = $sqli->prepare("select owner, comment, id, time from comments where story = ? order by time asc");
