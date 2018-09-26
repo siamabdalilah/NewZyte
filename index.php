@@ -62,7 +62,7 @@
 
 				// output stories
 				while($stmt->fetch()){
-					if ($hidd == 0){
+					if (!($hidd == 0)){
 						continue;
 					}
 					echo "<a class = 'contentwrap' href = '"; echo htmlspecialchars($link);
