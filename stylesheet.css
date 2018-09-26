@@ -82,7 +82,10 @@ html{
 }
 a{
 	text-decoration: none;
-	color:rgb(156, 136, 176);;
+	color:rgb(156, 136, 176);
+}
+a:hover{
+	color: rgb(146, 146, 166);
 }
 
 .content{
