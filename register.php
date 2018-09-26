@@ -65,12 +65,12 @@
 					}
 				}
 			?>
-			<form action = "<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method = 'post'>
-				<label class = 'label'>Username:</label>
-				<input type = 'text' name = 'user' class = input/><br>
-				<label class = 'label'>Password:</label>
+			<form id = 'regform' action = "<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method = 'post'>
+				<label class = 'label'>Username:</label><br>
+				<input type = 'text' name = 'user' class = 'input'/><br>
+				<label class = 'label'>Password:</label><br>
 				<input type = 'password' name = 'pass' class = 'input'/><br>
-				<label>Confirm Password:</label>
+				<label>Confirm Password:</label><br>
 				<input type = 'password' name = 'confpass' class = 'input'/><br>
 				<input type = 'submit' class = 'submitbutton'>
 			</form>
