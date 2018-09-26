@@ -10,7 +10,7 @@
 
 	//verify that story with given id exists. otherwise abort
 	$id = $_GET['id'];
-	$stmt = $sqli->prepare('select hidd from stories where id = ? and user = ?');
+	$stmt = $sqli->prepare('select hidd from stories where id = ? and owner = ?');
 	$stmt->bind_param('ss', $id, $_SESSION['user']);
 	$stmt->execute();
 	$stmt->bind_result($hidd);
