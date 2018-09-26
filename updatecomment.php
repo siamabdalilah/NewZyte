@@ -53,7 +53,7 @@
 		</div>
 
 		<div class = 'middle'>
-			<form action = 'commentinserter.php' method = 'post'>
+			<form action = 'commentupdater.php' method = 'post'>
 				<label class = 'largetext'>Comment</label><br><textarea name = 'comment' cols = '50' rows = '4' maxlength="50000" required autofocus><?php echo $comment?></textarea><br>
 				<input type = 'hidden' value = "<?php echo $id?>" name = 'id'/>
 				<input type = 'hidden' value = "<?php echo $storyid?>" name = 'story'/>
