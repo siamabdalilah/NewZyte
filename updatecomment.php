@@ -19,7 +19,7 @@
 	}
 	$stmt->close();
 
-	$getcomment = $sqli->prepare('select comment, story from comments where id = ?');
+	$getcomment = $sqli->prepare('select comment, story from comments where comments.id = ?');
 	$getcomment->bind_param('s', $id);
 	$getcomment->execute();
 	$getcomment->bind_result($comment, $storyid);
