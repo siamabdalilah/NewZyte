@@ -1,6 +1,8 @@
 <?php	
 	$flag = false;
 
+	//if username and password are set, check against database and assign
+	//session variable
 	if (isset($_POST['user_name']) && isset($_POST['password'])){
 		$pass = htmlentities($_POST['password']);
 		$hashret = $sqli->prepare('select password_hash from users where user_name = ?');

@@ -2,10 +2,13 @@
 	session_start();
 	require 'database.php';
 
+	//dont allow if there is not a user logged in or story is not specified
 	if (!isset($_SESSION['user']) || !isset($_GET['id'])){
 		header("Location: index.php");
 		exit;
 	}
+
+	//verify that story with given id exists. otherwise abort
 	$id = $_GET['id'];
 	$stmt = $sqli->prepare('select count(*) from stories where id = ?');
 	$stmt->bind_param('s', $id);

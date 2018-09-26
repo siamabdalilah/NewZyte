@@ -1,6 +1,7 @@
 <?php
 	session_start();
 
+	//if no user is logged in, abort
 	if (!isset($_SESSION['user'])){
 		header("Location: index.php");
 		exit;

@@ -22,6 +22,9 @@
 
 			<div class = 'rightside'>
 				<?php
+					// check whether a user is logged in and output accordingly
+
+					//welcome prompt
 					if (isset($_SESSION['user'])){
 						echo "Welcome, ";
 						echo htmlspecialchars($_SESSION['user']);
@@ -31,6 +34,7 @@
 
 					}
 					else{
+						//login prompt
 						if ($flag){
 							echo "<span class = 'wrong'>Invalid. Please try again</span> &nbsp";
 						}
@@ -45,6 +49,7 @@
 
 		<div class = 'middle'>
 			<?php
+				// get stories
 				$stmt = $sqli->prepare("select title, link, owner, time from stories order by time desc");
 				if (!$stmt){
 					printf("Query Prep Failed: %s\n", $sqli->error);
@@ -55,6 +60,7 @@
 
 				$stmt->bind_result($title, $link, $user, $time);
 
+				// output stories
 				while($stmt->fetch()){
 					echo "<a class = 'contentwrap' href = '"; echo htmlspecialchars($link);
 					echo "'>";

@@ -83,7 +83,6 @@ html{
 a{
 	text-decoration: none;
 	color:rgb(156, 136, 176);
-	transition: all 0.5s ease;
 }
 a:hover{
 	color: rgb(126, 126, 146);
