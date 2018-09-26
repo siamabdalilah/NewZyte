@@ -43,8 +43,8 @@
 					echo "Welcome, ";
 					echo htmlspecialchars($_SESSION['user']);
 
-					echo "&nbsp <a href = 'logout.php' class = 'button'> Log Out</a>&nbsp";
-					echo "<a href = 'index.php' class = 'button'>Home</a>&nbsp<a href ='dashboard.php' class = 'button'>Dashboard</a>";
+					echo "&nbsp; <a href = 'logout.php' class = 'button'> Log Out</a>&nbsp;";
+					echo "<a href = 'index.php' class = 'button'>Home</a>&nbsp;<a href ='dashboard.php' class = 'button'>Dashboard</a>";
 				?>
 			</div>
 		</div>

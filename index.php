@@ -29,17 +29,17 @@
 						echo "Welcome, ";
 						echo htmlspecialchars($_SESSION['user']);
 
-						echo "&nbsp <a href = 'logout.php' class = 'button'> Log Out</a>&nbsp";
-						echo "<a href = 'insertstory.php' class = 'button'>Add Story</a>&nbsp<a href ='dashboard.php' class = 'button'>Dashboard</a>";
+						echo "&nbsp; <a href = 'logout.php' class = 'button'> Log Out</a>&nbsp;";
+						echo "<a href = 'insertstory.php' class = 'button'>Add Story</a>&nbsp;<a href ='dashboard.php' class = 'button'>Dashboard</a>";
 
 					}
 					else{
 						//login prompt
 						if ($flag){
-							echo "<span class = 'wrong'>Invalid. Please try again</span> &nbsp";
+							echo "<span class = 'wrong'>Invalid. Please try again</span> &nbsp;";
 						}
 						echo "<form action = '"; echo htmlentities($_SERVER['PHP_SELF']); 
-						echo "' method = 'POST'><label class = 'label'>Username:   </label><input type = 'text' name = 'user_name' class = 'input'/>&nbsp
+						echo "' method = 'POST'><label class = 'label'>Username:   </label><input type = 'text' name = 'user_name' class = 'input'/>&nbsp;
 						<label class = 'label'>Password:   </label><input type = 'Password' name = 'password' class = 'input'/><input type = 'submit' class = 'submitbutton' value = 'Login'/></form>";
 						echo "<a href = 'register.php' class = 'button'> Register New User</a>";
 					}

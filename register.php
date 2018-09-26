@@ -24,7 +24,7 @@
 			<div class = 'rightside'>
 				<?php
 					echo "<form action = '"; echo htmlentities($_SERVER['PHP_SELF']); 
-					echo "' method = 'POST'><label class = 'label'>Username:   </label><input type = 'text' name = 'user_name' class = 'input'/>&nbsp
+					echo "' method = 'POST'><label class = 'label'>Username:   </label><input type = 'text' name = 'user_name' class = 'input'/>&nbsp;
 					<label class = 'label'>Password:   </label><input type = 'Password' name = 'password' class = 'input'/><input type = 'submit' class = 'submitbutton' value = 'Login'/></form>";
 					echo "<a href = 'index.php' class = 'button'>Home</a>";
 				?>
