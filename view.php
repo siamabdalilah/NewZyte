@@ -43,7 +43,7 @@
 						echo htmlspecialchars($_SESSION['user']);
 
 						echo "&nbsp <a href = '$outlink' class = 'button'> Log Out</a>&nbsp";
-						echo "<a href = 'insertstory.php' class = 'button'>Add Story</a>&nbsp<a href = 'index.php' class = 'button'>Home</a><a href ='dashboard.php' class = 'button'>Dashboard</a>";
+						echo "<a href = 'insertstory.php' class = 'button'>Add Story</a>&nbsp<a href = 'index.php' class = 'button'>Home</a>&nbsp<a href ='dashboard.php' class = 'button'>Dashboard</a>";
 
 					}
 					else{

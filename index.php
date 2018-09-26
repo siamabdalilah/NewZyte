@@ -50,7 +50,7 @@
 		<div class = 'middle'>
 			<?php
 				// get stories
-				$stmt = $sqli->prepare("select title, link, owner, time from stories order by time desc");
+				$stmt = $sqli->prepare("select title, link, owner, time, hidd from stories order by time desc");
 				if (!$stmt){
 					printf("Query Prep Failed: %s\n", $sqli->error);
 					exit;
@@ -58,10 +58,13 @@
 
 				$stmt->execute();
 
-				$stmt->bind_result($title, $link, $user, $time);
+				$stmt->bind_result($title, $link, $user, $time, $hidd);
 
 				// output stories
 				while($stmt->fetch()){
+					if ($hidd == 0){
+						continue;
+					}
 					echo "<a class = 'contentwrap' href = '"; echo htmlspecialchars($link);
 					echo "'>";
 					echo "<div class = 'content'>";

@@ -52,7 +52,7 @@
 					echo htmlspecialchars($title);
 					echo "<br>$hidd";
 					echo "</span></div></a>";
-					echo "<span style = 'font-size: 10px;'><a href = 'togglehidden.php?id=".$id."'>&nbspToggle-Hidden</a></span><br><br>";
+					echo "<span style = 'font-size: 10px;'><a href = 'togglehidden.php?id=".$id."'>&nbsp-Toggle-Hidden</a></span><br><br>";
 				}
 			?>
 		</div>
