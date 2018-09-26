@@ -12,10 +12,10 @@
 <!doctype html>
 
 <html lang = 'en'>
-<head>
-	<title>Add Story</title>
-	<link href = 'stylesheet.css' rel ='stylesheet' type = 'text/css'/>
-</head>
+	<head>
+		<title>Add Story</title>
+		<link href = 'stylesheet.css' rel ='stylesheet' type = 'text/css'/>
+	</head>
 	<body>
 		<div class = 'top'>
 			<div class = 'title'>
