@@ -12,7 +12,7 @@
 	$user = $_SESSION['user'];
 	$storyid = $_POST['story'];
 
-	$stmt = $sqli->prepare('update comments set comment = ? where id = ?');
+	$stmt = $sqli->prepare('update comments set comment = ? where comments.id = ?');
 	$stmt->bind_param('sss', $comment, $id);
 	$stmt->execute();
 
