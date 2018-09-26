@@ -66,13 +66,13 @@
 				}
 			?>
 			<form action = "<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method = 'post'>
-				<label>Username:</label>
-				<input type = 'text' name = 'user'/><br>
-				<label>Password:</label>
-				<input type = 'password' name = 'pass'/><br>
+				<label class = 'label'>Username:</label>
+				<input type = 'text' name = 'user' class = input/><br>
+				<label class = 'label'>Password:</label>
+				<input type = 'password' name = 'pass' class = 'input'/><br>
 				<label>Confirm Password:</label>
-				<input type = 'password' name = 'confpass'/><br>
-				<input type = 'submit'>
+				<input type = 'password' name = 'confpass' class = 'input'/><br>
+				<input type = 'submit' class = 'submitbutton'>
 			</form>
 		</div>
 	</body>
