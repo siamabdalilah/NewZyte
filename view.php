@@ -58,7 +58,7 @@
 						}
 						echo "<form action = '$link' method = 'POST'><label class = 'label'>Username:   </label><input type = 'text' name = 'user_name' class = 'input'/>&nbsp
 						<label class = 'label'>Password:   </label><input type = 'Password' name = 'password' class = 'input'/><input type = 'submit' class = 'submitbutton' value = 'Login'/></form>";
-						echo "<a href = 'register.php' class = 'button'> Register new User</a>&npsp<a href = 'index.php' class = 'button'>Home</a>";
+						echo "<a href = 'register.php' class = 'button'> Register new User</a>&npsp <a href = 'index.php' class = 'button'>Home</a>";
 					}
 				?>
 			</div>
