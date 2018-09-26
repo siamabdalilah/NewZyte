@@ -13,7 +13,7 @@
 	$storyid = $_POST['story'];
 
 	$stmt = $sqli->prepare('update comments set comment = ? where comments.id = ?');
-	$stmt->bind_param('sss', $comment, $id);
+	$stmt->bind_param('ss', $comment, $id);
 	$stmt->execute();
 
 	$stmt->close();
@@ -27,4 +27,3 @@
 <html>
 <body>
 	<?php echo $id.' '.$storyid ?>
-	
