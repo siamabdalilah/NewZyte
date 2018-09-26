@@ -15,8 +15,10 @@
 	$stmt->execute();
 	$stmt->bind_result($title, $story, $owner, $time, $storyid);
 	$link = 'view.php';
+	$outlink = 'logout.php';
 	if (isset($_GET['id'])){
 		$link .= '?id='.$id;
+		$outlink .= '?id='.$id;
 	}
 
 ?>

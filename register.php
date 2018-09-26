@@ -12,6 +12,7 @@
 <html lang = 'en'>
 	<head>
 		<title>Create New User</title>
+		<link href = 'stylesheet.css' rel = 'stylesheet' type = 'text/css'/>
 	</head>
 
 	<body>
@@ -30,6 +31,7 @@
 			</div>
 		</div>
 		<div class = 'middle'>
+			<span style = "font-size: 15px">Register New User:</span><br>
 			<?php
 				if (isset($_POST['user'])  && isset($_POST['pass']) && isset($_POST['confpass'])){
 					$stmt = $sqli->prepare("select count(*) from users where user_name = ?");
