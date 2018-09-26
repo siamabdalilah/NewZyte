@@ -26,7 +26,7 @@
 		echo "$id $ins";
 		$query->bind_param('ss', $ins, $id);
 		$query->execute();
-		header("Location: dashboard.php");
+		//header("Location: dashboard.php");
 		//exit;
 
 	}
