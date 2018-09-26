@@ -20,10 +20,6 @@
 
 	$link = 'view.php?id='.$storyid;
 
-	//header("Location: $link");
-	//exit;
+	header("Location: $link");
+	exit;
 ?>
-
-<html>
-<body>
-	<?php echo $id.' '.$storyid ?>
