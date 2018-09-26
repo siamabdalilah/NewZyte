@@ -15,7 +15,7 @@
 	$stmt->execute();
 	$stmt->bind_result($hidd);
 
-	if (stmt->fetch()){
+	if ($stmt->fetch()){
 		$stmt->close();
 		$ins = '0';
 		if ($hidd == 0){
