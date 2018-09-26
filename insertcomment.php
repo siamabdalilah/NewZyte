@@ -53,6 +53,7 @@
 			<form action = 'commentinserter.php' method = 'post'>
 				<label class = 'largetext'>Comment</label><br><textarea name = 'comment' cols = '50' rows = '4' maxlength="50000" required autofocus></textarea><br>
 				<input type = 'hidden' value = "<?php echo $id?>" name = 'id'/>
+				<input type = 'hedden' value = '<?php echo $_SESSION['token']?>' name = 'csrf'/>
 				<input type = 'submit' class = 'submitbutton'/>
 			</form>
 		</div>

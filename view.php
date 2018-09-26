@@ -3,7 +3,7 @@
 	require 'database.php';
 	require 'login.php';
 
-
+	//prepare query to get story
 	$id = isset($_GET['id'])? $_GET['id'] : null;
 	$usr = isset($_SESSION['user'])? $_SESSION['user'] : null;
 	$stmt = $sqli->prepare("select title, stories, owner, time, id from stories where id = ?");

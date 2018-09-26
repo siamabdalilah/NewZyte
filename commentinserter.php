@@ -2,9 +2,14 @@
 	session_start();
 	require 'database.php';
 
+	// check that user is logged in and comment is set
 	if (!isset($_SESSION['user']) || !isset($_POST['comment'])){
 		header("Location: index.php");
 		exit;
+	}
+
+	if(!hash_equals($_SESSION['token'], $_POST['csrf'])){
+		die("Request forgery detected");
 	}
 
 	$comment = $_POST['comment'];

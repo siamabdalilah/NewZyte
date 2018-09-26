@@ -2,6 +2,7 @@
 	session_start();
 	require 'database.php';
 
+	// check that user is logged in, comment id exists and belongs to user
 	if (!isset($_SESSION['user']) || !isset($_POST['comment'])){
 		header("Location: index.php");
 		exit;

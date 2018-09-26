@@ -2,6 +2,7 @@
 	session_start();
 	require 'database.php';
 
+	// make sure user is logged in comment belongs to user
 	if (!isset($_SESSION['user']) || !isset($_GET['id'])){
 		header("Location: index.php");
 		exit;

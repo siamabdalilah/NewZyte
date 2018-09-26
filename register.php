@@ -41,10 +41,12 @@
 					$stmt->bind_result($count);
 					$stmt->fetch();
 					
+					// if username exists, print error
 					if ($count != 0){
 						echo "Username already exists<br>";
 					}
 
+					// if passwords do not match, print error
 					else if (!($_POST['pass'] === $_POST['confpass'])){
 						echo "Passwords do no match<br>";
 					}
@@ -59,6 +61,8 @@
 						$usrins->bind_param('ss', $_POST['user'], $pass);
 
 						$usrins->execute();
+
+						//if all is well, login user after registration
 						session_start();
 						$_SESSION['user'] = $_POST['user'];
 						header("Location: index.php");

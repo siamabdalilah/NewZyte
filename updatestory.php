@@ -2,6 +2,8 @@
 	session_start();
 	require 'database.php';
 
+	//make sure user is logged in, the story is question exists and the user is
+	//the owner
 	if (!isset($_SESSION['user']) || !isset($_GET['id'])){
 		header("Location: index.php");
 		exit;
@@ -19,6 +21,7 @@
 	}
 	$stmt->close();
 
+	//get story to update
 	$getstory = $sqli->prepare('select stories, title from stories where id = ?');
 	$getstory->bind_param('s', $id);
 	$getstory->execute();
@@ -58,6 +61,7 @@
 				<label class = 'largetext'>Add Story Title:</label><br><textarea name = 'title' cols = '150' maxlength="150" autofocus required><?php echo $title?></textarea><br>
 				<label class = 'largetext'>Story</label><br><textarea name = 'story' cols = '150' rows = '30' maxlength="50000" required><?php echo $story?></textarea><br>
 				<input type = 'hidden' name = 'id' value = "<?php echo $id ?>"/>
+				<input type = 'hedden' value = '<?php echo $_SESSION['token']?>' name = 'csrf'/>
 				<input value = 'update' type = 'submit' class = 'submitbutton'/>
 
 			</form>
