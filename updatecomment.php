@@ -43,6 +43,7 @@
 			<div class = 'rightside'>
 				<?php
 					echo "Welcome, ";
+					echo $id.' '.$storyid;
 					echo htmlspecialchars($_SESSION['user']);
 
 					echo "&nbsp <a href = 'logout.php' class = 'button'> Log Out</a>&nbsp";
