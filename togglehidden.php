@@ -17,17 +17,17 @@
 
 	if ($stmt->fetch()){
 		$stmt->close();
-		$ins = 0;
+		$ins = '0';
 		if ($hidd == 0){
-			$ins == 1;
+			$ins = '1';
 		}
 
 		$query = $sqli->prepare('update stories set hidd = ? where id = ?');
 		echo "$id $ins";
-		$query->bind_param('is', $ins, $id);
+		$query->bind_param('ss', $ins, $id);
 		$query->execute();
-		//header("Location: dashboard.php");
-		//exit;
+		header("Location: dashboard.php");
+		exit;
 
 	}
 	
