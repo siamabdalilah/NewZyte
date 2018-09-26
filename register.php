@@ -30,7 +30,8 @@
 				?>
 			</div>
 		</div>
-		<div class = 'middle'>
+		<div id = 'regform'>
+			<br><br><br>
 			<span style = "font-size: 15px">Register New User:</span><br>
 			<?php
 				if (isset($_POST['user'])  && isset($_POST['pass']) && isset($_POST['confpass'])){
@@ -65,7 +66,7 @@
 					}
 				}
 			?>
-			<form id = 'regform' action = "<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method = 'post'>
+			<form action = "<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method = 'post'>
 				<label class = 'label'>Username:</label><br>
 				<input type = 'text' name = 'user' class = 'input'/><br>
 				<label class = 'label'>Password:</label><br>
