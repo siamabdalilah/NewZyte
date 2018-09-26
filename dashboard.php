@@ -15,6 +15,7 @@
 <html lang ='en'>
 	<head>
 		<title>Dashboard</title>
+		<link href = 'stylesheet.css' rel ='stylesheet' type = 'text/css'/>
 	</head>
 
 	<body>
@@ -35,10 +36,10 @@
 		</div>
 		<div class = 'middle'>
 			<?php
-				$stmt = $sqli->prepare('select stories, hidd, id, link from stories where owner = ? order by time desc');
+				$stmt = $sqli->prepare('select title, hidd, id, link from stories where owner = ? order by time desc');
 				$stmt->bind_param('s', $_SESSION['user']);
 				$stmt->execute();
-				$stmt->bind_result($story, $hid, $id, $link);
+				$stmt->bind_result($title, $hid, $id, $link);
 
 				while ($stmt->fetch()){
 					$hidd = 'hidden';
