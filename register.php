@@ -65,6 +65,7 @@
 						//if all is well, login user after registration
 						session_start();
 						$_SESSION['user'] = $_POST['user'];
+						$_SESSION['token'] = bin2hex(openssl_random_pseudo_bytes(32));
 						header("Location: index.php");
 						exit;
 					}

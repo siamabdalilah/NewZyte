@@ -6,19 +6,25 @@
 	//prepare query to get story
 	$id = isset($_GET['id'])? $_GET['id'] : null;
 	$usr = isset($_SESSION['user'])? $_SESSION['user'] : null;
-	$stmt = $sqli->prepare("select title, stories, owner, time, id from stories where id = ?");
+	$stmt = $sqli->prepare("select title, stories, owner, time, hidd, id from stories where id = ?");
 	$stmt->bind_param('s', $id);
 	if(!$stmt){
 		printf("Query Prep Failed: %s\n", $sqli->error);
 		exit;
 	}	
 	$stmt->execute();
-	$stmt->bind_result($title, $story, $owner, $time, $storyid);
+	$stmt->bind_result($title, $story, $owner, $time, $hidd, $storyid);
 	$link = 'view.php';
 	$outlink = 'logout.php';
 	if (isset($_GET['id'])){
 		$link .= '?id='.$id;
 		$outlink .= '?id='.$id;
+	}
+
+	// if story is hidden, redirect to index.php
+	if(!($hidd == 0)){
+		header("Location: index.php");
+		exit;
 	}
 
 ?>

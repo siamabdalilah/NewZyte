@@ -36,6 +36,7 @@
 		</div>
 		<div class = 'middle'>
 			<?php
+				// list all stories by user with hidden status
 				$stmt = $sqli->prepare('select title, hidd, id, link from stories where owner = ? order by time desc');
 				$stmt->bind_param('s', $_SESSION['user']);
 				$stmt->execute();
@@ -52,6 +53,7 @@
 					echo htmlspecialchars($title);
 					echo "<br>Hidden Status: $hidd";
 					echo "</span></div></a>";
+					// link to toggle hidden status
 					echo "<span style = 'font-size: 10px;'><a href = 'togglehidden.php?id=".$id."'>&nbsp-Toggle-Hidden</a></span><br><br>";
 				}
 			?>
