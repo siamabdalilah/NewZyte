@@ -8,6 +8,10 @@
 		exit;
 	}
 
+	if(!hash_equals($_SESSION['token'], $_POST['csrf'])){
+		die("Request forgery detected");
+	}
+
 	$comment = $_POST['comment'];
 	$id = $_POST['id'];
 	$user = $_SESSION['user'];
