@@ -49,7 +49,7 @@
 						echo htmlspecialchars($_SESSION['user']);
 
 						echo "&nbsp <a href = '$outlink' class = 'button'> Log Out</a>&nbsp";
-						echo "<a href = 'insertstory.php' class = 'button'>Add Story</a>&nbsp<a href = 'index.php' class = 'button'>Home</a> &nbsp<a href ='dashboard.php' class = 'button'>Dashboard</a>";
+						echo "<a href = 'insertstory.php' class = 'button'>Add Story</a>&nbsp<a href = 'index.php' class = 'button'>Home</a>&nbsp<a href ='dashboard.php' class = 'button'>Dashboard</a>";
 
 					}
 					else{
@@ -58,7 +58,7 @@
 						}
 						echo "<form action = '$link' method = 'POST'><label class = 'label'>Username:   </label><input type = 'text' name = 'user_name' class = 'input'/>&nbsp
 						<label class = 'label'>Password:   </label><input type = 'Password' name = 'password' class = 'input'/><input type = 'submit' class = 'submitbutton' value = 'Login'/></form>";
-						echo "<a href = 'register.php' class = 'button'> Register new User</a>&npsp <a href = 'index.php' class = 'button'>Home</a>";
+						echo "<a href = 'register.php' class = 'button'> Register new User</a> &npsp<a href = 'index.php' class = 'button'>Home</a>";
 					}
 				?>
 			</div>
