@@ -1,5 +1,6 @@
-### Module 3
-Author: Siam Abd Al-Ilah
+### NewZyte
+
+Author: Siam Abd Al-Ilah  
 Email: siam.abdal-ilah@wustl.edu
 
 The link to the project can be found [here](http://ec2-52-15-37-3.us-east-2.compute.amazonaws.com/~siamabdalilah/newssite/)
